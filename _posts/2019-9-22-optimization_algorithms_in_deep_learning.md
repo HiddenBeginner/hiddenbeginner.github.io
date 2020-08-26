@@ -269,7 +269,7 @@ Adadelta는 $1$을 해결하기 위해 크기 $w$인 window를 사용한다.
 
 - 즉, 지난 모든 gradient의 정보를 저장하는 것이 아니고 지난 $w$개의 gradient 정보만을 저장한다.
 
-Adagrad와 또 다른 점은 gradient의 제곱의 합을 저장하지 않고, gradient의 제곱에 대한 기댓값을 저장한다는 것이다. → $E[g^2]_t + E[g^2]_{t-1}$
+Adagrad와 또 다른 점은 gradient의 제곱의 합을 저장하지 않고, gradient의 제곱에 대한 기댓값을 저장한다는 것이다. → $E[g^2]_t + E[g^2]^{t-1}$
 
 또한 과거의 gradient 정보의 영향력을 감소시키기 위해 다음과 같은 식을 사용했다.
 - 이를 **decaying average of squared gradient** 라고 표현한다.<br/><br/>
