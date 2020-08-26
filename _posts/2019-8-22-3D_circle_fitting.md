@@ -85,28 +85,14 @@ $A = U\Sigma V^T$ <br/>
 &nbsp;&nbsp;&nbsp; SVD를 이용하여 $\| \mathbf{A} \mathbf{n} \|^2$를 다음과 같이 다시 적어볼 수 있습니다. <br/><br/>
 
 $\begin{matrix}
-\| A \mathbf{n} \|^2 & = & A\mathbf{n} \cdot A\mathbf{n} \\
- & = & (A\mathbf{n})^TA\mathbf{n} \\
- & = & (U\Sigma V^T \mathbf{n})^TU\Sigma V^T\mathbf{n} \\
- & = & \mathbf{n}^T V \Sigma U^T U\Sigma V^T\mathbf{n} \\
- & = & \mathbf{n}^T V \Sigma \Sigma V^T\mathbf{n} \\
- & = & (\Sigma V^T \mathbf{n})^T \Sigma V^T\mathbf{n} \\
- & = & \Sigma V^T \mathbf{n} \cdots \Sigma V^T\mathbf{n} \\
- & = & \|\Sigma V^T \mathbf{n}\|^2 \\
- & = & (\sigma_1 b_1)^2 + (\sigma_2 b_2)^2 + (\sigma_3 b_3)^2 \\
-\end{matrix}$ <br/> <br/>
+\| A \mathbf{n} \|^2 & = & A\mathbf{n} \cdot A\mathbf{n} \\\  & = & (A\mathbf{n})^TA\mathbf{n} \\\  & = & (U\Sigma V^T \mathbf{n})^TU\Sigma V^T\mathbf{n} \\\  & = & \mathbf{n}^T V \Sigma U^T U\Sigma V^T\mathbf{n} \\\  & = & \mathbf{n}^T V \Sigma \Sigma V^T\mathbf{n} \\\  & = & (\Sigma V^T \mathbf{n})^T \Sigma V^T\mathbf{n} \\\  & = & \Sigma V^T \mathbf{n} \cdots \Sigma V^T\mathbf{n} \\\  & = & \|\Sigma V^T \mathbf{n}\|^2 \\\  & = & (\sigma_1 b_1)^2 + (\sigma_2 b_2)^2 + (\sigma_3 b_3)^2 \\\ \end{matrix}$ <br/> <br/>
 
 &nbsp;&nbsp;&nbsp; 이 때, $\mathbf{b} = V^T\mathbf{n}$ 입니다. 그리고 $\sigma_3$가 가장 작기 때문에 우리는 $\mathbf{b} = (0,0,1)^T$ 를 선택해줌으로써 $\| A \mathbf{n} \|^2$를 최소로 만들어 줄 수 있습니다.(Lagrange 승수법과 singular value와 선형변환된 벡터 사이의 부등식을 통해 유도할 수 있습니다.) <br/> <br/>
 
 &nbsp;&nbsp;&nbsp; 따라서 우리는 $\|A \mathbf{n} \|^2$를 최소로 만들어주는 $\mathbf{n}$을 다음과 같이 구할 수 있습니다. <br/><br/>
 
 $\begin{matrix}
-V^T \mathbf{n} & = & \mathbf{b} \\
-V V^T \mathbf{n} & = & V \mathbf{b} \\
-\mathbf{n} & = & V \mathbf{b} \\
- & = & V \left( \begin{smallmatrix} 0\\\0\\\1 \end{smallmatrix} \right) \\
- & = & V(:,3)
-\end{matrix}$ <br/>
+V^T \mathbf{n} & = & \mathbf{b} \\\ V V^T \mathbf{n} & = & V \mathbf{b} \\\ \mathbf{n} & = & V \mathbf{b} \\\  & = & V \left( \begin{smallmatrix} 0\\\\0\\\\1 \end{smallmatrix} \right) \\\  & = & V(:,3) \end{matrix}$ <br/>
 
 즉, 법선벡터 $\mathbf{n}$을 $V$의 세 번 째 열 벡터로 선택함으로써 우리가 찾는 평면을 찾을 수 있습니다. <br/><br/>
 
