@@ -325,7 +325,9 @@ $\theta_{t+1} = \theta_t + \Delta\theta_t$<br/><br/>
 <br/><br/>    
 
 사실, Adadelta에서 이야기했던 첫 번 째 업데이트식과 같다.<br/><br/>
-$E[g^2]_t = 0.9 E[g^2] _{t-1} + 0.1g_t^2$<br/>
+
+$E[g^2] _t = 0.9 E[g^2] _{t-1} + 0.1g _t^2$
+
 $\theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{E[g^2] + \epsilon}}g_t$<br/><br/>
 
   - Adadelta와 비슷한 시기에 Geof Hinton이 그의 코세라 강의에서 제안한 방법
