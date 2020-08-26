@@ -273,7 +273,7 @@ Adagrad와 또 다른 점은 gradient의 제곱의 합을 저장하지 않고, g
 
 또한 과거의 gradient 정보의 영향력을 감소시키기 위해 다음과 같은 식을 사용했다.
 - 이를 **decaying average of squared gradient** 라고 표현한다.<br/><br/>
-$E[g^2]_t=\gamma E[g^2]_{t-1} + (1-\gamma)g_t^2$<br/><br/>
+$E[g^2]_t =  + (1-\gamma)g_t^2$<br/><br/>
 - 이 정보를 사용해서 $\Delta\theta_t$를 다음과 같이 결정한다.<br/><br/>
 $\Delta\theta_t = -\frac{\eta}{\sqrt{E[g^2]_t + \epsilon}}g_t$<br/><br/>
 - $RMS$(root mean square)가 $\sqrt{\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}}$ 이므로 다음처럼 더 간략히 표현할 수 있다.<br/><br/>
