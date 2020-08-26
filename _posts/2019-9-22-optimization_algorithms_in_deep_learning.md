@@ -274,7 +274,7 @@ Adagrad와 또 다른 점은 gradient의 제곱의 합을 저장하지 않고, g
 또한 과거의 gradient 정보의 영향력을 감소시키기 위해 다음과 같은 식을 사용했다.
 - 이를 **decaying average of squared gradient** 라고 표현한다. <br/><br/>
 
-$E[g^2]_t = \gamma E[g^2]_{t-1} + (1-\gamma)g_t^2$<br/><br/>
+$$E[g^2]_t = \gamma E[g^2]_{t-1} + (1-\gamma)g_t^2$$
 
 - 이 정보를 사용해서 $\Delta\theta_t$를 다음과 같이 결정한다.<br/><br/>
 $\Delta\theta_t = -\frac{\eta}{\sqrt{E[g^2]_t + \epsilon}}g_t$<br/><br/>
@@ -296,15 +296,15 @@ $\Delta\theta_t = -\frac{\eta}{RMS[g]_t}g_t$
     - 여기서 $\frac{1}{\partial^2 J/\partial\theta^2} = - \frac{\Delta \theta}{\partial J/\partial\theta}$ 임을 이용했다.(Newton's Method)
     - 우변의 분모에 해당하는 텀( $RMS[g]$ )은 가지고 있으므로 분자($\Delta\theta$) 텀을 만들기 위해 똑같이 다음을 생각한다.<br/><br/>
     
-    $E[\Delta\theta^2]_t = \gamma E[\Delta\theta^2]_{t-1} + (1-\gamma)\Delta\theta_t^2$<br/><br/>
+    $$E[\Delta\theta^2]_t = \gamma E[\Delta\theta^2]_{t-1} + (1-\gamma)\Delta\theta_t^2$$
     
     - 다시 RMS를 사용해 간단히 적으면 <br/><br/>
     
-    $\Delta\theta_t = -\frac{RMS[{\Delta\theta}]_t}{RMS[g]_t}g_t$<br/><br/>
+    $\Delta\theta_t = -\frac{RMS[\Delta\theta]_t}{RMS[g]_t}g_t$<br/><br/>
     
-    - 이다. 하지만 현재($t$)는 업데이트 전이므로 $RMS[{\Delta\theta}]_{t}$ 값을 알 수 없기 때문에 
-    - 대신 $RMS[{\Delta\theta}]_{t-1}$을 근사값으로 사용한다.<br/><br/>
-    $\Delta\theta_t = -\frac{RMS[{\Delta\theta}]_{t-1}}{RMS[g]_t}g_t$<br/><br/>
+    - 이다. 하지만 현재($t$)는 업데이트 전이므로 $RMS[\Delta\theta]_{t}$ 값을 알 수 없기 때문에 
+    - 대신 $RMS[\Delta\theta]_{t-1}$을 근사값으로 사용한다.<br/><br/>
+    $\Delta\theta_t = -\frac{RMS[\Delta\theta]_{t-1}}{RMS[g]_t}g_t$<br/><br/>
 - 최종적으로 업데이트식은<br/><br/>
 $\theta_{t+1} = \theta_t + \Delta\theta_t$<br/><br/>
 
@@ -327,8 +327,8 @@ $\theta_{t+1} = \theta_t + \Delta\theta_t$<br/><br/>
 <br/><br/>    
 
 사실, Adadelta에서 이야기했던 첫 번 째 업데이트식과 같다.<br/><br/>
-$E[g^2]_t = 0.9 E[g^2]_{t-1} + 0.1g_t^2$<br/>
-$\theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{E[g^2] + \epsilon}}g_t$<br/><br/>
+$$E[g^2]_t = 0.9 E[g^2]_{t-1} + 0.1g_t^2$$
+$$\theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{E[g^2] + \epsilon}}g_t$$
 
   - Adadelta와 비슷한 시기에 Geof Hinton이 그의 코세라 강의에서 제안한 방법
   - 적절한 $\gamma$ 값으로 0.9를, $\eta$ 값으로 0.001을 제안
