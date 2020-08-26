@@ -30,19 +30,9 @@ comments: true
 <a name='section1'></a>
 ## 텐서(Tensor)란 무엇인가?
 &nbsp;&nbsp;&nbsp;&nbsp;우리는 
-$\begin{bmatrix} 
-a_1 \\\
-a_2 \\\ 
-\vdots \\\ 
-a_n 
-\end{bmatrix}$
+$\begin{bmatrix} a_1 \\\ a_2 \\\  \vdots \\\  a_n  \end{bmatrix}$
 을 벡터라고 부른다. 그리고 벡터들을 나란히 모아놓은 
-$\begin{bmatrix} 
-a_{11} & a_{12} & \cdots & a_{1d} \\\
-a_{21} & a_{22} & \cdots & a_{2d} \\\
-\vdots & \vdots & \ddots & \vdots \\\
-a_{n1} & a_{n2} & \cdots & a_{nd}
-\end{bmatrix}$
+$\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1d} \\\  a_{21} & a_{22} & \cdots & a_{2d} \\\ \vdots & \vdots & \ddots & \vdots \\\ a_{n1} & a_{n2} & \cdots & a_{nd} \end{bmatrix}$
 을 행렬이라고 부른다. 그리고 이들 행렬을 쌓아올린 직육면체 형태의 자료구조도 생각해볼 수 있다. 그리고 상상은 할 수 없겠지만 직육면체들을 쌓아올린 4차원 형태의 자료구조도 분명히 있을 것이다. 텐서는 이러한 자료구조들을 일반적으로 가리키는 단어이다. 벡터는 1차원 텐서, 행렬은 2차원 텐서, 직육면체 형태의 자료구조는 3차원 텐서이다. 텐서를 `numpy`스럽게 말하면 다차원 배열(multidimensional array)이라고 부를 수 있다. 아래 그림처럼 $N$차원 텐서에 저장되어 있는 값에 접근하기 위해서는 $N$개의 인덱스가 필요하다.<br/><br/>
 
 ![figure1](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2020-1-21-pytorch_tensor/figure1.png)
