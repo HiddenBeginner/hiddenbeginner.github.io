@@ -12,18 +12,18 @@ comments: true
 <br/>
 데이터를 생각하기 전에 먼저 원의 방정식을 생각해보자. 다들 잘 알고 있는 것처럼 중심이 $(x_c, y_c)$이고 반지름이 $r$ 인 원의 방정식은 다음과 같다.<br/>
 <br/>
-$$(x-x_c)^2 + (y - y_c)^2 = r^2$$<br/>
+$(x-x_c)^2 + (y - y_c)^2 = r^2$<br/>
 <br/>
 이를 조금만 더 정리해서 선형대수스럽게 만들어보자.<br/>
 <br/>
-$$(x-x_c)^2 + (y - y_c)^2 = r^2$$<br/>
-$$x^2 + y^2 -2(xx_c + yy_c) + x_c^2 + y_c^2 = r^2$$<br/>
-$$2(xx_c + yy_c) + (r^2 - x_c^2 - y_c^2) =  x^2 + y^2$$<br/>
-$$2x_cx + 2y_cy + (r^2 - x_c^2 - y_c^2) =  x^2 + y^2$$<br/>
+$(x-x_c)^2 + (y - y_c)^2 = r^2$<br/>
+$x^2 + y^2 -2(xx_c + yy_c) + x_c^2 + y_c^2 = r^2$<br/>
+$2(xx_c + yy_c) + (r^2 - x_c^2 - y_c^2) =  x^2 + y^2$<br/>
+$2x_cx + 2y_cy + (r^2 - x_c^2 - y_c^2) =  x^2 + y^2$<br/>
 <br/>
 이 때, $\mathbf{c} = (c_0, c_1, c_2)$라고 하면 다음과 같이 쉽게 정리할 수 있다.<br/>
 <br/>
-$$c_0 + c_1x + c_2y = x^2 + y^2$$<br/>
+$c_0 + c_1x + c_2y = x^2 + y^2$<br/>
 <br/>
 where $c_0 = r^2 - x_c^2 - y_c^2$,  $c_1 = 2x_c$,  $c_2 = 2y_c$<br/>
 <br/>
@@ -31,34 +31,24 @@ where $c_0 = r^2 - x_c^2 - y_c^2$,  $c_1 = 2x_c$,  $c_2 = 2y_c$<br/>
 <br/>
 이를 유념하면서 $n$개의 데이터 $\{(x_1, y_1), (x_2, y_2), \cdots ,(x_n, y_n) \}$ 가 원 위에 있다고 생각해보자. 이는 $n$개의 연립방정식이 있다는 것이며 이를 다음과 같이 선형계로 표현할 수 있을 것이다.  
 
-$$A\mathbf{c} = \mathbf{b}$$<br/>
+$A\mathbf{c} = \mathbf{b}$<br/>
 이 때
 $A = 
 \begin{bmatrix}
-1 & x_1 & y_1 \\\
-1 & x_2 & y_2 \\\
-\vdots & \vdots & \vdots \\\
-1 & x_n & y_n \\\
-\end{bmatrix},
-\mathbf{b} =
-\begin{bmatrix}
-x_1^2 + y_1^2 \\\
-x_2^2 + y_2^2 \\\
-\vdots \\\
-x_n^2 + y_n^2 \\\
-\end{bmatrix}
+1 & x_1 & y_1 \\\ 1 & x_2 & y_2 \\\ \vdots & \vdots & \vdots \\\ 1 & x_n & y_n \\\ \end{bmatrix},
+\mathbf{b} = \begin{bmatrix} x_1^2 + y_1^2 \\\ x_2^2 + y_2^2 \\\ \vdots \\\ x_n^2 + y_n^2 \\\ \end{bmatrix}
 $ 이다.<br/> 
 <br/>
 물론 실제로는 모든 데이터가 한 원 위에 있지 않을 것이기 때문에 등호는 성립하지 않을 것이고 우리는 가능한 모든 $\mathbf{c}$ 중에 오차를 가장 작게 만들어주는 $\hat{\mathbf{c}}$를 찾는 것이다. 즉,<br/>
 <br/>
 
-$$\hat{\mathbf{c}} = \operatorname{argmin}_\mathbf{c}\lVert \mathbf{b}-A\mathbf{c} \rVert^2$$<br/>
+$\hat{\mathbf{c}} = \operatorname{argmin}_\mathbf{c}\lVert \mathbf{b}-A\mathbf{c} \rVert^2$<br/>
 <br/>
 
 를 풀어야 하는 것이다. 선형회귀를 공부하신 분들은 위 식의 해 $\hat{\mathbf{c}}$가 다음과 같이 결정된다는 것을 알고 있을 것이다.<br/>
 <br/>
 
-$$\hat{\mathbf{c}} = (A^TA)^{-1}A^T\mathbf{b}$$<br/>
+$\hat{\mathbf{c}} = (A^TA)^{-1}A^T\mathbf{b}$<br/>
 <br/>
 
 이렇게 구한 $\hat{\mathbf{c}}$와 위에서 언급한 $x_c, y_c$의 관계를 통해 원의 방정식을 구하면 된다.<br/>
@@ -123,18 +113,8 @@ plt.show()
 
 $A = 
 \begin{bmatrix}
-1 & x_1 & y_1 \\\
-1 & x_2 & y_2 \\\
-\vdots & \vdots & \vdots \\\
-1 & x_n & y_n \\\
-\end{bmatrix},
-\mathbf{b} =
-\begin{bmatrix}
-x_1^2 + y_1^2 \\\
-x_2^2 + y_2^2 \\\
-\vdots \\\
-x_n^2 + y_n^2 \\\
-\end{bmatrix}
+1 & x_1 & y_1 \\\ 1 & x_2 & y_2 \\\ \vdots & \vdots & \vdots \\\ 1 & x_n & y_n \\\ \end{bmatrix}, 
+\mathbf{b} = \begin{bmatrix} x_1^2 + y_1^2 \\\ x_2^2 + y_2^2 \\\ \vdots \\\ x_n^2 + y_n^2 \\\ \end{bmatrix}
 $ 를 만들어보자
 
 
