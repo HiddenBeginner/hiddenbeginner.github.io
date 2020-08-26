@@ -33,7 +33,7 @@ comments: true
 &nbsp;&nbsp;&nbsp; 2차원 좌표평면에 있는 원의 방정식을 $<rcos\theta,rsin\theta> + <x_0,y_0>$와 같이 매개변수 방정식으로 나타낼 수 있는 것처럼, 3차원 좌표공간에 있는 원의 방정식 또한 다음과 같이 나타낼 수 있습니다. <br/>
 
 <br/>
-$$\mathbf{P}_{\textbf{circle}}(\theta) = rcos\theta\mathbf{u} + rsin\theta(\mathbf{n}\times\mathbf{u})+\mathbf{C},\;0\le t \le 2\pi$$<br/>
+$\mathbf{P}_{\textbf{circle}}(\theta) = rcos\theta\mathbf{u} + rsin\theta(\mathbf{n}\times\mathbf{u})+\mathbf{C},\;0\le t \le 2\pi$<br/>
 <br/>
 
 &nbsp;&nbsp;&nbsp; 이 때, 원의 반지름은 $r$, 원의 중심은 $\mathbf{C}=(x_0,y_0,z_0)$, 단위법선벡터는 $\mathbf{n}$이며, $\mathbf{u}$는 $\mathbf{n}$과 수직한 아무 벡터일 수 있습니다. <br/>
@@ -65,19 +65,19 @@ $rcos\theta<1, 0, 0> + rsin\theta <0, 1, 0> + <x_0, y_0, 0>$ <br/>
 
 &nbsp;&nbsp;&nbsp; 먼저 데이터 포인트들을 하나의 $n\times3$ 행렬 $A$로 나타낼 수 있습니다. <br/><br/>
 
-$$A = (\mathbf{P}_0-\mathbf{c}, \mathbf{P}_1-\mathbf{c}, \cdots, \mathbf{P}_n-\mathbf{c})^T$$ <br/>
+$A = (\mathbf{P}_0-\mathbf{c}, \mathbf{P}_1-\mathbf{c}, \cdots, \mathbf{P}_n-\mathbf{c})^T$ <br/>
 <br/>
 
 &nbsp;&nbsp;&nbsp; 이 때, 편의를 위해서 각 데이터에서 데이터의 중심 ($\mathbf{c} = \frac{1}{n}\sum_i{\mathbf{P}_i}$) 을 빼주었습니다.(이렇게 평행이동한 데이터들의 중심은 원점이 됩니다.) <br/><br/>
 
 &nbsp;&nbsp;&nbsp; 평행이동된 점($\mathbf{P}_i - \mathbf{c}$) 과 평면사이의 거리는 법선벡터와 내적의 정의를 사용하면 $(\mathbf{P}_i - \mathbf{c})^T\mathbf{n}$ 인 것을 알 수 있습니다(데이터를 평면에 수직한 법선벡터 $\mathbf{n}$ 에 투영한 것이 내적이므로). 그렇다면 $A\mathbf{n}$은 각 포인트에서 평면까지의 거리들을 나타내는 벡터가 되는 것이고. 각 포인트와 평면사이 거리의 제곱의 합은 벡터 $A\mathbf{n}$의 유클리디안 크기인 $\lVert A\mathbf{n} \rVert^2$이 될 것입니다. 우리는 $\lVert A\mathbf{n} \rVert^2$ 을 최소로 만들어주는 평면을 찾고 싶은 것이므로, 우리는 다음을 만족하는 $\mathbf{n}$을 찾아주어야 합니다. <br/><br/>
 
-$$\mathbf{n} = \arg\!\min_{\mathbf{n}\in \mathbb{R}^3 \atop \|\mathbf{n}\|=1}  \| \mathbf{A} \mathbf{n} \|^2$$ <br/>
+$\mathbf{n} = \arg\!\min_{\mathbf{n}\in \mathbb{R}^3 \atop \|\mathbf{n}\|=1}  \| \mathbf{A} \mathbf{n} \|^2$ <br/>
 <br/>
 
 &nbsp;&nbsp;&nbsp; 이를 만족하는 $\mathbf{n}$은 특이값분해(이하 SVD)를 통해 쉽게 구할 수 있습니다. SVD에 의해서 행렬 $A$는 다음과 같이 분해될 수 있습니다. <br/><br/>
 
-$$A = U\Sigma V^T$$ <br/>
+$A = U\Sigma V^T$ <br/>
 <br/>
 
 &nbsp;&nbsp;&nbsp; 이 때, $U$는 $n \times n$ orthonormal 행렬, $V$는 $3 \times 3$ orthonormal 행렬이고 각각은 $A$의 columns space와 row space의 orthogonal basis 입니다. 그리고 $\Sigma$는 특이값 $\sigma_1 \ge \sigma_2 \ge \sigma_3 \ge 0$ 을 원소로 갖는 대각행렬입니다. SVD에 대한 더 자세한 설명은 새로운 포스트에서 다뤄보도록 하겠습니다. 참고로 SVD는 $A$와 같은 직사각행렬에 대해서도 존재합니다. <br/><br/>
@@ -85,15 +85,15 @@ $$A = U\Sigma V^T$$ <br/>
 &nbsp;&nbsp;&nbsp; SVD를 이용하여 $\| \mathbf{A} \mathbf{n} \|^2$를 다음과 같이 다시 적어볼 수 있습니다. <br/><br/>
 
 $\begin{matrix}
-\| A \mathbf{n} \|^2 & = & A\mathbf{n} \cdot A\mathbf{n} \\\
- & = & (A\mathbf{n})^TA\mathbf{n} \\\
- & = & (U\Sigma V^T \mathbf{n})^TU\Sigma V^T\mathbf{n} \\\
- & = & \mathbf{n}^T V \Sigma U^T U\Sigma V^T\mathbf{n} \\\
- & = & \mathbf{n}^T V \Sigma \Sigma V^T\mathbf{n} \\\
- & = & (\Sigma V^T \mathbf{n})^T \Sigma V^T\mathbf{n} \\\
- & = & \Sigma V^T \mathbf{n} \cdots \Sigma V^T\mathbf{n} \\\
- & = & \|\Sigma V^T \mathbf{n}\|^2 \\\
- & = & (\sigma_1 b_1)^2 + (\sigma_2 b_2)^2 + (\sigma_3 b_3)^2 \\\
+\| A \mathbf{n} \|^2 & = & A\mathbf{n} \cdot A\mathbf{n} \\
+ & = & (A\mathbf{n})^TA\mathbf{n} \\
+ & = & (U\Sigma V^T \mathbf{n})^TU\Sigma V^T\mathbf{n} \\
+ & = & \mathbf{n}^T V \Sigma U^T U\Sigma V^T\mathbf{n} \\
+ & = & \mathbf{n}^T V \Sigma \Sigma V^T\mathbf{n} \\
+ & = & (\Sigma V^T \mathbf{n})^T \Sigma V^T\mathbf{n} \\
+ & = & \Sigma V^T \mathbf{n} \cdots \Sigma V^T\mathbf{n} \\
+ & = & \|\Sigma V^T \mathbf{n}\|^2 \\
+ & = & (\sigma_1 b_1)^2 + (\sigma_2 b_2)^2 + (\sigma_3 b_3)^2 \\
 \end{matrix}$ <br/> <br/>
 
 &nbsp;&nbsp;&nbsp; 이 때, $\mathbf{b} = V^T\mathbf{n}$ 입니다. 그리고 $\sigma_3$가 가장 작기 때문에 우리는 $\mathbf{b} = (0,0,1)^T$ 를 선택해줌으로써 $\| A \mathbf{n} \|^2$를 최소로 만들어 줄 수 있습니다.(Lagrange 승수법과 singular value와 선형변환된 벡터 사이의 부등식을 통해 유도할 수 있습니다.) <br/> <br/>
@@ -101,10 +101,10 @@ $\begin{matrix}
 &nbsp;&nbsp;&nbsp; 따라서 우리는 $\|A \mathbf{n} \|^2$를 최소로 만들어주는 $\mathbf{n}$을 다음과 같이 구할 수 있습니다. <br/><br/>
 
 $\begin{matrix}
-V^T \mathbf{n} & = & \mathbf{b} \\\
-V V^T \mathbf{n} & = & V \mathbf{b} \\\
-\mathbf{n} & = & V \mathbf{b} \\\
- & = & V \left( \begin{smallmatrix} 0\\\0\\\1 \end{smallmatrix} \right) \\\
+V^T \mathbf{n} & = & \mathbf{b} \\
+V V^T \mathbf{n} & = & V \mathbf{b} \\
+\mathbf{n} & = & V \mathbf{b} \\
+ & = & V \left( \begin{smallmatrix} 0\\\0\\\1 \end{smallmatrix} \right) \\
  & = & V(:,3)
 \end{matrix}$ <br/>
 
@@ -120,7 +120,7 @@ V V^T \mathbf{n} & = & V \mathbf{b} \\\
 
 &nbsp;&nbsp;&nbsp; `Rodrigues' rotation formula` 는 주어진 벡터 $P$ 를 특정한 축을 기준으로 $\theta$만큼 축 회전한 벡터 $P_{rot}$ 를 구하는 공식입니다. 이 때 축을 나타내는 단위벡터를 $k$ 라고 하면 `Rodrigues' rotation formula` 는 다음과 같습니다. <br/><br/>
 
-$$P_{rot} = P cos\theta + (\mathbf{k} \times P) sin\theta + \mathbf{k} \; (\mathbf{k} \cdot P) (1 - cos\theta)$$ <br/>
+$P_{rot} = P cos\theta + (\mathbf{k} \times P) sin\theta + \mathbf{k} \; (\mathbf{k} \cdot P) (1 - cos\theta)$ <br/>
 <br/>
 
 &nbsp;&nbsp;&nbsp; `Rodrigues' rotation formula` 에 대해서는 다음 포스트에서 다루는 것으로 하고 일단은 받아들이고 진행하겠습니다. (유도는 어렵지 않기 때문에 궁금하신 분들께서는 참고문헌 [3]((#ref3)) 을 참조시면 좋을 것 같습니다.) 우리의 경우 회전할 각 $\theta$는 구한 평면의 법선벡터 $\mathbf{n}$와 $xy$ 평면의 법선벡터 $(0,0,1)^T$ 의 각을 구하면 되고 회전 축은 그 둘의 외적을 사용하면 됩니다. $\mathbf{k} = \mathbf{n} \times (0,0,1)^T$ <br/><br/>
