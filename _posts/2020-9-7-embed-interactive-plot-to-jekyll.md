@@ -25,7 +25,7 @@ fig.show()
 
 위 코드를 실행하면 아래와 같은 그래프가 생성된다. 결과 그래프를 단순하게 이미지로 캡처한 것이기 때문에 아직 interactive하지 않다.
 
-![figure1](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2020-9-7-embed-interactive-plot-to-jekyll/figure1.png){: width="400" height="400"){: .center}
+![figure1](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2020-9-7-embed-interactive-plot-to-jekyll/figure1.png)
 
 ---
 
@@ -48,7 +48,7 @@ fig.write_html('example.html')
 
 ### 4. `.md` 파일에서 include 해주기
 마지막으로 작성 중인 `markdown` 문서에서 원하는 위치에 다음 한 줄을 넣어주면 된다.<br/>
-`{% include plotly/example.html %}`
+![figure3](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2020-9-7-embed-interactive-plot-to-jekyll/figure3.png)
 
 {% include plotly/example.html %}
 
