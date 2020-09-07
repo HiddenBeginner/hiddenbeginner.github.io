@@ -48,9 +48,9 @@ fig.write_html('example.html')
 
 ### 4. `.md` 파일에서 include 해주기
 마지막으로 작성 중인 `markdown` 문서에서 원하는 위치에 다음 한 줄을 넣어주면 된다.<br/>
-`{% include plotly.example.html %}`
+`{% include plotly/example.html %}`
 
-{% include plotly.example.html %}
+{% include plotly/example.html %}
 
 ---
 ### 참고한 사이트
