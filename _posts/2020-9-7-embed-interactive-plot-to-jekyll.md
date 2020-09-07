@@ -7,13 +7,12 @@ use_math: true
 comments: true
 ---
 
-# <center>Interactive 시각화 Jekyll 블로그에 업로드하는 쉽고 간단한 방법</center>
 이번 포스트에서는 `plotly`와 `bokeh` 등과 같은 interactive한 시각화 결과 그래프를 `Jekyll` 블로그에 업로드하는 방법을 알아본다. 자신의 블로그 환경에 따라서 완전한 해결책이 아닐 수도 있음을 미리 언급하고 넘어가고 싶다. (a.k.a 밑밥)
 
 ---
 
 ### 1. 시각화 그래프 생성
-나는 파이썬에서 주로 `plotly`를 사용하여 interactive한 시각화 그래프를 그린다. 따라서 본 포스트에서는 `plotly`의 [공식문서](https://plotly.com/python/getting-started/)에 있는 그래프를 사용하였다. 하지만 `bokeh`나 `mpld3` 등 시각화 결과를 `.html` 형태로 저장할 수 있다면 모든 괜찮다. 
+나는 파이썬에서 주로 `plotly`를 사용하여 interactive한 시각화 그래프를 그린다. 따라서 본 포스트에서는 `plotly`의 [공식문서](https://plotly.com/python/getting-started/)에 있는 예제 그래프를 사용하였다. 하지만 `bokeh`나 `mpld3` 등 시각화 결과를 `.html` 형태로 저장할 수 있다면 무엇이든 괜찮다. 
 
 
 ```python
