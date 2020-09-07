@@ -25,7 +25,7 @@ fig.show()
 
 위 코드를 실행하면 아래와 같은 그래프가 생성된다. 결과 그래프를 단순하게 이미지로 캡처한 것이기 때문에 아직 interactive하지 않다.
 
-![figure1](https://github.com/HiddenBeginner/hiddenbeginner.github.io/blob/master/static/img/_posts/2020-9-7-embed-interactive-plot-to-jekyll/figure1.png){: width="400" height="400"){: .center}
+![figure1](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2020-9-7-embed-interactive-plot-to-jekyll/figure1.png){: width="400" height="400"){: .center}
 
 ---
 
@@ -42,7 +42,7 @@ fig.write_html('example.html')
 ### 3. `_includes` 폴더에 옮겨 넣기
 다음 단계는 위에서 만든 `html` 파일을 `_includes` 폴더에 옮겨 넣는 것이다. 나와 같은 경우에는 `_includes` 폴더에 이미 있는 `html` 파일들과 섞이는 것이 싫어서 `plotly` 폴더를 만들고 그 안에 넣어주었다. 
 
-![figure2](https://github.com/HiddenBeginner/hiddenbeginner.github.io/blob/master/static/img/_posts/2020-9-7-embed-interactive-plot-to-jekyll/figure2.png){: width="400" height="400"){: .center}
+![figure2](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2020-9-7-embed-interactive-plot-to-jekyll/figure2.png)
 
 ---
 
