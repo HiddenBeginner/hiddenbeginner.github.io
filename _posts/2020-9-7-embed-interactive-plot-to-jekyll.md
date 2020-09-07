@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Interactive 시각화 Jekyll 블로그에 업로드하는 쉽고 간단한 방법"
+title:  "Interactive한 시각화 그래프를 Jekyll 블로그에 업로드하는 쉽고 간단한 방법"
 date:   2020-9-7 20:10
 categories: [Others,Python]
 use_math: true
