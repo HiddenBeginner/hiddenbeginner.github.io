@@ -28,8 +28,8 @@ share:
 urls:
     - text: About Me
       url: /about/
-    - text: Projects
-      url: /projects/
+#    - text: Projects
+#      url: /projects/
     - text: Publications
       url: /publications/
 
