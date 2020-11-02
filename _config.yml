@@ -30,6 +30,8 @@ urls:
       url: /about/
     - text: Projects
       url: /projects/
+    - text: Publications
+      url: /publications/
 
 url: "https://hiddenbeginner.github.io"
 baseurl: ""
