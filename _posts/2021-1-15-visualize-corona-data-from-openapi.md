@@ -37,7 +37,7 @@ comments: true
 
 ![figure4](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2021-1-15-visualize-corona-data-from-openapi/figure4.png)
 
-활용신청을 누르면 승인이 되었다는 메세지와 함께 1-2시간 후에 정상적인 사용이 가능하다고 안내가 나온다. 짧으면 1-2시간, 길면 며칠 후에 이용가능하다. 내가 OpenAPI를 사용할 수 있는지 알 수 있는 방법은 
+활용신청을 누르면 승인이 되었다는 메세지와 함께 1-2시간 후에 정상적인 사용이 가능하다고 안내가 나온다. 짧으면 1-2시간, 길면 며칠 후에 이용가능하다. 내가 지금 현재 OpenAPI를 사용할 수 있는지 알 수 있는 방법은 
 
 > `마이페이지` → `[승인] 보건복지부_코로나19 감염_현황` → 활용신청 상세기능정보의 미리보기 `확인` → `미리보기`
 
@@ -46,11 +46,12 @@ comments: true
 ---
 
 ## OpenAPI에 데이터 요청하고 처리하기
-이제 파이썬에서 OpenAPI에 데이터를 요청하고 처리하는 방법을 알아보자. 우리의 API에 데이터를 요청하면 순순히 `*.csv` 이나 `*.xlsx` 등의 정형화된 파일을 주지 않는다. 대신, 많은 사람들이 다양하게 개발할 수 있도록 형태로 반환을 해준다. 파이썬 내장 라이브러리인 `urllib`을 사용하여 API에 데이터를 요청할 것이고, 받은 응답을 `BeautifulSoup4`를 통해 처리할 것이다. `BeautifulSoup4`는 다음 명령어를 통해 설치할 수 있다.
+이제 파이썬에서 OpenAPI에 데이터를 요청하고 처리하는 방법을 알아보자. 우리가 API에 데이터를 요청하면 순순히 `*.csv` 이나 `*.xlsx` 등의 정형화된 파일을 주지 않는다. 대신, 많은 사람들이 다양하게 개발할 수 있는 일반적인 형태로 반환해준다. 
+이번 장에서는 파이썬 내장 라이브러리인 `urllib`을 사용하여 API에 데이터를 요청하고, 받은 응답을 `BeautifulSoup4`를 통해 처리해볼 것이다. `BeautifulSoup4`는 다음 명령어를 통해 설치할 수 있다.
 
 >! pip install beautifulsoup4
 
-먼저 필요한 라이브러리들을 임포트해주자. 사용하고 있는 파이썬 버전에 따라 `urllib`에 있는 함수들이 각자 다른 곳에 숨어있을 때가 있다. 이 때는 구글링을 이용해서 알잘딱깔센 (역주: 알아서 잘 딱 깔끔하게 센스있게) 해주자. 참고로 파이썬 3.8을 사용했다.
+먼저 필요한 라이브러리들을 임포트해주자. 사용하고 있는 파이썬 버전에 따라 `urllib`에 있는 함수들이 각자 다른 곳에 숨어있을 때가 있다. 이 때는 구글링을 이용해서 알잘딱깔센 (역주: 알아서 잘 딱 깔끔하게 센스있게) 해주자. 참고로 필자는 파이썬 3.8을 사용했다.
 
 
 ```python
@@ -62,11 +63,16 @@ from urllib.request import Request, urlopen
 from urllib.parse import unquote, quote_plus, urlencode
 ```
 
-다음으로 우리가 데이터를 요청할 때 필요한 인자들을 정의하자. 우리가 하는 과정을 쉽게 말하자면, 
+앞으로 우리가 하게 될 과정을 쉽게 말하자면, 
 - 어떤 주소를 가진 웹사이트에 들어감으로써 데이터를 요청하게 되고,
 - 요청에 대한 답변을 웹사이트에 표시해준다.
 
-`servicekey`는 개발계정 상세보기에 있는 `일반 인증키 (UTF8)`이다. 그것을 복사해서 넣자. 잠시 후에 `url`에 여러 인자들을 추가로 적어줄 것인데, 그 때 사용하는 `urlencode` 함수에 의해 우리의 `일반 인증키`가 다른 값으로 적혀진다. 따라서, `servicekey`를 decode해준 `decodekey`도 정의해놓는다.
+가장 먼저 우리가 데이터를 요청할 때 필요한 인자들을 정의하자. `servicekey`에는 각자 
+
+> `마이페이지` → `[승인] 보건복지부_코로나19 감염_현황` → 서비스 정보의 `일반 인증키 (UTF-8)`
+
+를 복사해서 넣자. 잠시 후에 `url`에 여러 인자들을 추가로 적어줄 것인데, 그 때 사용하는 `urlencode` 함수에 의해 우리의 `일반 인증키`가 다른 값으로 적혀진다. 
+따라서, `servicekey`를 decode해준 `decodekey`도 정의해놓는다.
 
 
 ```python
@@ -101,7 +107,9 @@ URL = url + query_params
 
 ![figure5](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2021-1-15-visualize-corona-data-from-openapi/figure5.png)
 
-우리는 위와 같은 형태의 데이터를 원했던 것이 아니다. `*.csv` 나 `*.xlsx` 처럼 정형화된 데이터가 필요할 것이다. 하지만 결과 사이트를 보면 분명 규칙성이 존재한다. `<body>` 태그 - `<items>` 태그 안에 일자별 데이터들이 `<item>` 태그로 구분되어 있다. 그리고 각 `<item>` 태그 안에 있는 `<decideCnt>`가 누적 확진자 수다. 이 값들만 선택해서 얻고 싶다. `BeautifulSoup4`를 사용하면 태그들의 규칙성을 파악하여 원하는 태그들에 접근할 수 있다. 먼저, 파이썬에서 `URL`에 접속하고 사이트에 표시되는 html 을 가져와보자.
+우리는 위와 같은 형태의 데이터를 원했던 것이 아니다. `*.csv` 나 `*.xlsx` 처럼 정형화된 데이터가 필요할 것이다. 
+하지만 결과 사이트를 보면 분명 규칙성이 존재한다. `<body>` 태그 - `<items>` 태그 안에 일자별 데이터들이 `<item>` 태그로 구분되어 있다. 
+그리고 각 `<item>` 태그 안에 있는 `<decideCnt>`가 누적 확진자 수다. 이 값들만 선택해서 얻고 싶다. `BeautifulSoup4`를 사용하면 태그들의 규칙성을 파악하여 원하는 태그들에 접근할 수 있다. 먼저, 파이썬에서 `URL`에 접속하고 사이트에 표시되는 html 을 가져와보자.
 - **(숙제) `page` 변수에 어떤 값이 저장되어 있는지 출력해보시오.**
 
 
@@ -347,6 +355,6 @@ plt.grid(axis='y', color='gray')
 plt.show()
 ```
 
-
-    
 ![png](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2021-1-15-visualize-corona-data-from-openapi/2021-1-15-visualize-corona-data-from-openapi_23_0.png)
+
+이상으로 이번 글을 마치도록 하겠다. 찡긋.
