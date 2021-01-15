@@ -31,7 +31,7 @@ comments: true
 
 오른쪽에 `활용신청` 버튼을 누르자
 
-![figure3](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2021-1-15-visualize-corona-data-from-openapi/figure3.png)
+![figure3](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2021-1-15-visualize-corona-data-from-openapi/figure33.png)
 
 활용목적을 그럴싸하게 적어주고 라이선스 표시에 "동의합니다." 를 체크하고 활용신청을 눌러주자. 해당 OpenAPI는 자동 승인이기 때문에 활용목적을 어떻게 적을까 오래 고민하지 않아도 된다. 
 
