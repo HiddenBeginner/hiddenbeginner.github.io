@@ -13,13 +13,14 @@ comments: true
 학교에서나 개인적으로 프로젝트를 하고자 할 때, 요새 가장 인기 있는 주제는 코로나19일 것이다. 최근 학생들을 대상으로 네이버에 코로나를 검색했을 때 나오는 `일별 신규 확진자 수 그래프`를 비슷하게 그려보는 튜토리얼을 준비했었다. 최근 가장 주목 받고 있는 주제인만큼 정형화된 데이터를 찾을 수 있을줄 알았는데 공공데이터포털에서 OpenAPI 형태로 제공하고 있었다. 크게 복잡한 과정이 없다고는 하지만 OpenAPI가 처음인 분들은 진입하기 어려울 것이다. OpenAPI 공포증이 있는 사람들을 위해 이 글을 작성해본다. 
 
 **이 포스트에서 다룰 내용들**
-
-{:toc}
+- [공공데이터포털에서 OpenAPI 신청하기](#section1)
+- [OpenAPI에 데이터 요청하고 처리하기](#section2)
+- [네이버 검색 결과처럼 시각화하기](#section3)
 
 ---
 
 
-## 공공데이터포털에서 OpenAPI 신청하기
+## <a name="section1">공공데이터포털에서 OpenAPI 신청하기</a>
 공공데이터포털에서 `보건복지부_코로나19 감염_현황` OpenAPI를 신청하는 방법을 알아보자. 먼저, [공공데이터포털](https://data.go.kr/index.do)에 접속하여 로그인까지 하자. 
 
 ![figure1](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2021-1-15-visualize-corona-data-from-openapi/figure1.png)
@@ -44,7 +45,7 @@ comments: true
 
 ---
 
-## OpenAPI에 데이터 요청하고 처리하기
+## <a id="section2">OpenAPI에 데이터 요청하고 처리하기</a>
 이제 파이썬에서 OpenAPI에 데이터를 요청하고 처리하는 방법을 알아보자. 우리가 API에 데이터를 요청하면 순순히 `*.csv` 이나 `*.xlsx` 등의 정형화된 파일을 주지 않는다. 대신, 많은 사람들이 다양하게 개발할 수 있는 일반적인 형태로 반환해준다. 
 이번 장에서는 파이썬 내장 라이브러리인 `urllib`을 사용하여 API에 데이터를 요청하고, 받은 응답을 `BeautifulSoup4`를 통해 처리해볼 것이다. `BeautifulSoup4`는 다음 명령어를 통해 설치할 수 있다.
 
@@ -233,7 +234,7 @@ df
 
 ---
 
-## 네이버 검색 결과처럼 시각화하기
+## <a name="section3">네이버 검색 결과처럼 시각화하기</a>
 `BeautifulSoup4`를 이용하여 html 으로부터 원하는 정보만 가져오는데 성공했고, 이를 바탕으로 데이터를 만들어보았다. 이제 네이버에 코로나를 검색하였을 때 나오는 `일별 신규 확진자 수 그래프`랑 비슷하게 시각화를 해보자. 먼저, 그냥 `marplotlib`의 `bar` 함수를 사용해보자.
 
 
