@@ -60,10 +60,11 @@ div.content pre {
   background: #333333;
   padding: 10px;
   color: #FFF;
-  overflow-x: auto;
+  overflow-x: scroll;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 12px;
   border: none;
+  width:66.66666667%
 }
 div.content .highlight {
 	background: #333333;
