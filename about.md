@@ -61,7 +61,7 @@ use_math: true
 <br/>
 
 <details>
-<summary><h4 style="display: inline">대회 참여 및 수상 경력</h4></summary>
+<summary><h4 style="display: inline"><a id="" style="color: #cc0000">대회 참여 및 수상 경력</a></h4></summary>
 <div markdown="1">
 
 **2020년 11월** [공공데이터 활용 수력 댐 강우예측 AI 경진대회](https://dacon.io/competitions/official/235646/overview/), 한국수력원자력(주) & Dacon
