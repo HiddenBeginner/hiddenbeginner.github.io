@@ -38,24 +38,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.ex1 {
-  color: #3fa757;
-  cursor: pointer;
-}
-
-.ex1 > h4 {
-  color: #3fa757;
-  cursor: pointer;
-  display: inline;
-}
-
-.ex1 > h4:hover {
-  color: #B3B3B3;
-  cursor: pointer;
-  text-decoration: underline;
-  display: inline;
-}
-
 /* Layout */
 .main-layout {
   background: #fff;
@@ -193,4 +175,44 @@ div.col-sm-3 img.profile-avatar {
   div.col-sm-3 {
     margin-top: 30px;
   }
+}
+
+/* custom */
+.ex1 {
+  color: #3fa757;
+  cursor: pointer;
+}
+
+.ex1 > h4 {
+  color: #3fa757;
+  cursor: pointer;
+  display: inline;
+}
+
+.ex1 > h4:hover {
+  color: #B3B3B3;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+}
+
+table {
+    font-size: 11pt;
+    font-family: Arial;
+    border-collapse: collapse;
+    border: 1px solid silver;
+
+}
+
+td, th {
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background: #E0E0E0;
+}
+
+tr:hover {
+    background: silver;
+    cursor: pointer;
 }
