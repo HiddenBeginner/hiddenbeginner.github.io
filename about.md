@@ -61,8 +61,8 @@ use_math: true
 <br/>
 
 <details>
-<h4><summary>대회 참여 및 수상 경력</summary></h4>
-
+<summary><strong>대회 참여 및 수상 경력</strong></summary>
+<div markdown="1">
 
 **2020년 11월** [공공데이터 활용 수력 댐 강우예측 AI 경진대회](https://dacon.io/competitions/official/235646/overview/), 한국수력원자력(주) & Dacon
 - 대회 주제: 기상 레이더에서 관측한 구름(반사도) 이미지 데이터를 이용하여, 미래의 구름(반사도) 이미지 예측
@@ -122,4 +122,5 @@ use_math: true
 - 대회 주제: Fashion MNIST 정확도 경진
 - 해결 방법: VGG like CNN 사용
 - 결과: 3등 수상
+</div>
 </details>
