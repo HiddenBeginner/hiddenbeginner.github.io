@@ -73,8 +73,8 @@ use_math: true
 <br/>
 
 <details>
-<summary>
-<h4 style="display: inline; text-decoration: underline; color: #cc0000">대회 참여 및 수상 경력</h4>
+<summary class="ex1">
+<h4>대회 참여 및 수상 경력</h4>
 </summary>
 <div markdown="1">
 

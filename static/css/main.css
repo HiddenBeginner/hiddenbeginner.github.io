@@ -38,6 +38,25 @@ a:hover {
   text-decoration: underline;
 }
 
+summary.ex1 {
+  color: #3fa757;
+  cursor: pointer;
+  display: inline;
+}
+
+summary > h4 {
+  color: #3fa757;
+  cursor: pointer;
+  display: inline;
+}
+
+summary > h4:hover {
+  color: #B3B3B3;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+}
+
 /* Layout */
 .main-layout {
   background: #fff;
