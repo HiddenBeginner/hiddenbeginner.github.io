@@ -204,13 +204,19 @@ table {
 
 }
 
-thead th{
+thead > th {
    text-align: center;
-
+   padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px
 }
 
-td, th {
-    padding: 10px;
+tbody > td, th {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px
     text-align: center;
 }
 
