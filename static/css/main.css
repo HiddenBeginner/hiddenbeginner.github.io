@@ -207,12 +207,12 @@ table {
 thead > th {
    text-align: center;
    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px
+   padding-right: 10px;
+   padding-top: 3px;
+   padding-bottom: 3px
 }
 
-tbody > td, th {
+td, th {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 3px;
