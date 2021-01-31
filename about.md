@@ -4,14 +4,14 @@ title: About
 permalink: /about/
 use_math: true
 ---
-## 인사글 
+### 인사글 
 안녕하세요. 이동진입니다. 이 블로그 뿐만 아니라 케글에도 간간히 [커널글](https://www.kaggle.com/micajoumathematics) 들을 올리고 있으니 놀러와주세요~!<br/> 
 
 ---
 
-## 주요 이력 및 활동 사항
+### 주요 이력 및 활동 사항
 
-### 주요이력
+#### 주요이력
 
 **2013년 3월 ~ 2020년 2월** 아주대학교 수학과 (학부)
 
@@ -21,7 +21,11 @@ use_math: true
 
 <br/>
 
-### 프로젝트
+<details>
+<summary>
+<h4 style="display: inline; text-decoration: underline; color: #cc0000">프로젝트</h4>
+</summary>
+<div markdown="1">
 
 **2020년 2월 ~ 2020년 5월** 위상수학적 데이터 분석을 이용한 이상거래 탐지시스템 고도화 검증 (국민은행 용역과제)
 
@@ -37,10 +41,16 @@ use_math: true
 
 - 지구회전 관측 데이터와 모델 데이터 분석 및 시각화
 - 위상수학적 데이터 분석과 딥러닝을 사용하여 현재 지구회전 모델을 검증하는 방법 제안
+</div>
+</details>
 
 <br/>
 
-### 기타 활동들
+<details>
+<summary>
+<h4 style="display: inline; text-decoration: underline; color: #cc0000">기타 활동들</h4>
+</summary>
+<div markdown="1">
 
 **2019년 3월 ~ 2019년 12월** 아주대학교 수학과 산업수학 소학회 MiC 창설 및 부회장으로 활동
 
@@ -57,11 +67,15 @@ use_math: true
 - [AdamW: Decoupled weight decay regularization](https://youtu.be/-Sd_zH_LHBo)
 - [Visualizing data using t-SNE](https://youtu.be/zCYKD3YfcSM)
 - [Sharp Minima Can Generalize For Deep Nets](https://youtu.be/5E9SFe5WU1s)
+</div>
+</details>
 
 <br/>
 
 <details>
-<summary><h4 style="display: inline"><a id="" style="color: #cc0000">대회 참여 및 수상 경력</a></h4></summary>
+<summary>
+<h4 style="display: inline; text-decoration: underline; color: #cc0000">대회 참여 및 수상 경력</h4>
+</summary>
 <div markdown="1">
 
 **2020년 11월** [공공데이터 활용 수력 댐 강우예측 AI 경진대회](https://dacon.io/competitions/official/235646/overview/), 한국수력원자력(주) & Dacon
