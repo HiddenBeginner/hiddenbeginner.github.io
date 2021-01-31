@@ -4,14 +4,14 @@ title: About
 permalink: /about/
 use_math: true
 ---
-### 인사글 
+## 인사글 
 안녕하세요. 이동진입니다. 이 블로그 뿐만 아니라 케글에도 간간히 [커널글](https://www.kaggle.com/micajoumathematics) 들을 올리고 있으니 놀러와주세요~!<br/> 
 
 ---
 
-### 주요 이력 및 활동 사항
+## 주요 이력 및 활동 사항
 
-#### 주요이력
+### 주요이력
 
 **2013년 3월 ~ 2020년 2월** 아주대학교 수학과 (학부)
 
@@ -21,7 +21,7 @@ use_math: true
 
 <br/>
 
-#### 프로젝트
+### 프로젝트
 
 **2020년 2월 ~ 2020년 5월** 위상수학적 데이터 분석을 이용한 이상거래 탐지시스템 고도화 검증 (국민은행 용역과제)
 
@@ -40,7 +40,7 @@ use_math: true
 
 <br/>
 
-#### 기타 활동들
+### 기타 활동들
 
 **2019년 3월 ~ 2019년 12월** 아주대학교 수학과 산업수학 소학회 MiC 창설 및 부회장으로 활동
 
@@ -61,7 +61,7 @@ use_math: true
 <br/>
 
 <details>
-<summary><strong>대회 참여 및 수상 경력</strong></summary>
+<summary><h4 style="display: inline">대회 참여 및 수상 경력</h4></summary>
 <div markdown="1">
 
 **2020년 11월** [공공데이터 활용 수력 댐 강우예측 AI 경진대회](https://dacon.io/competitions/official/235646/overview/), 한국수력원자력(주) & Dacon
