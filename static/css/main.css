@@ -204,8 +204,14 @@ table {
 
 }
 
+thead th{
+   text-align: center;
+
+}
+
 td, th {
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
 tr:nth-child(even) {
