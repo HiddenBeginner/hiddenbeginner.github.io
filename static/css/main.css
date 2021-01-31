@@ -177,7 +177,7 @@ div.col-sm-3 img.profile-avatar {
   }
 }
 
-/* custom */
+/* ==== Start Custom Style ==== */
 .ex1 {
   color: #3fa757;
   cursor: pointer;
@@ -195,13 +195,13 @@ div.col-sm-3 img.profile-avatar {
   text-decoration: underline;
   display: inline;
 }
-
+/* Table Style */
+/* The code is based on https://stackoverflow.com/a/50939211/10258799 */
 table {
     font-size: 11pt;
     font-family: Arial;
     border-collapse: collapse;
     border: 1px solid silver;
-
 }
 
 thead > th {
@@ -209,7 +209,7 @@ thead > th {
    padding-left: 10px;
    padding-right: 10px;
    padding-top: 3px;
-   padding-bottom: 3px
+   padding-bottom: 3px;
 }
 
 td, th {
@@ -228,3 +228,4 @@ tr:hover {
     background: silver;
     cursor: pointer;
 }
+/* ==== End Custom Style ==== */
