@@ -22,8 +22,8 @@ use_math: true
 <br/>
 
 <details>
-<summary>
-<h4 style="display: inline; text-decoration: underline; color: #cc0000">프로젝트</h4>
+<summary class="ex1">
+<h4>프로젝트</h4>
 </summary>
 <div markdown="1">
 
@@ -47,8 +47,8 @@ use_math: true
 <br/>
 
 <details>
-<summary>
-<h4 style="display: inline; text-decoration: underline; color: #cc0000">기타 활동들</h4>
+<summary class="ex1">
+<h4>기타 활동들</h4>
 </summary>
 <div markdown="1">
 
