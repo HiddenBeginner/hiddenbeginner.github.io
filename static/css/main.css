@@ -60,16 +60,16 @@ div.content pre {
   background: #333333;
   padding: 10px;
   color: #FFF;
-  overflow-x: scroll;
+  overflow-x: auto;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 12px;
   border: none;
-  width: 90.0%
-
 }
+
 div.content .highlight {
 	background: #333333;
 }
+
 footer {
   border-top: 1px solid #F7F1F1;
   width: 100%;
