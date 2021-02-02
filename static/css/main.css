@@ -64,10 +64,10 @@ div.content pre {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 12px;
   border: none;
-  width:66.66666667%
 }
 div.content .highlight {
 	background: #333333;
+    width:66.66666667%;
 }
 footer {
   border-top: 1px solid #F7F1F1;
