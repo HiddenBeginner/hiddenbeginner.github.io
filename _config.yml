@@ -22,6 +22,8 @@ social:
       link: "https://github.com/HiddenBeginner"
     - icon: fa-linkedin
       link: "https://www.linkedin.com/in/hiddenbeginner"
+    - icon: fa-facebook
+      link: "https://www.facebook.com/hiddenbeginner"
 
 share:
   twitter_username: github.io
