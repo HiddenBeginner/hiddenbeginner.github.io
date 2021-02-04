@@ -20,6 +20,8 @@ collections:
 social:
     - icon: fa-github
       link: "https://github.com/HiddenBeginner"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/hiddenbeginner"
 
 share:
   twitter_username: github.io
