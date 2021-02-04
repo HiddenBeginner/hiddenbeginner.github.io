@@ -44,12 +44,12 @@ $G_t$: Return
 $V(s)$: State-value function
 - $V(s)=\mathbb{E}[G_t \mid S_t=s]$
 - 현재 state $s$ 이후로 Policy를 따라 에피소드를 진행했을 때 얻게 되는 return의 기댓값
-- state $s$ 에서 시작하여 Policy를 따라가면 1개의 에피소드가 만들어지고 대응하는 $G_t$ 값을 계산할 수 있다. 이 과정을 여러번 반복하면 여러 에피소드와 여러 $G_t$가 만들어질텐데 그것의 평균으로 이해하면 된다. (이 설명은 표본평균에 대한 이야기고, 실제 기대값은 알 수 없는 모수로서 표본평균으로 추정을 한다.)
+- state $s$ 에서 시작하여 Policy를 따라가면 1개의 에피소드가 만들어지고 대응하는 $G_t$ 값이 산출된다. 이 과정을 여러번 반복하면 여러 에피소드와 여러 $G_t$가 만들어질텐데 그것의 평균으로 이해하면 된다. (이 설명은 표본평균에 대한 이야기고, 실제 기대값은 알 수 없는 모수로서 표본평균으로 추정을 한다.)
         
 $Q(s,a)$: Action-value function
 - $Q(s, a)=\mathbb{E}[G_t \mid S_t=s, A_t=a]$
 - 현재 state $s$에서 action $a$를 취한 이후로 Policy를 따라 에피소드를 진행했을 때 얻게 되는 return의 기댓값
-- $V(s)$와 마찬가지로 state $s$에서 시작하여 action $a$를 취하고 난 후 Policy를 따라가면 1개의 에피소드와 $G_t$ 값이 완성된다. 이 과정을 여러번 반복하여 얻은 $G_t$들의 평균으로 이해하면 된다.
+- $V(s)$와 마찬가지로 state $s$에서 시작하여 action $a$를 취하고 난 이후에 Policy를 따라가면 1개의 에피소드와 $G_t$ 값이 완성된다. 이 과정을 여러번 반복하여 얻은 $G_t$들의 평균으로 이해하면 된다.
 - state $s$에서 취할 수 있는 action들은 여러가지가 있을 것이다. 각 action $a$에 대한 $Q(s, a)$ 값들을 모두 구해 더하면 $V(s)$ 값이 된다. 즉, 
 
 <div markdown="1" style="text-align: center">
@@ -59,18 +59,18 @@ $V(s)=\sum_{a \in A}{Q(s, a)}$
 
 <details>
 <summary class="ex1" style="text-align: center"><h5>클릭하여 증명 펼치기</h5></summary>
-<div markdonw="1">
+<div markdonw="1" style="width: 66.6666667%; overflow-x: auto;">
     
 취할 수 있는 action이 n개가 있다고 가정하자. 즉, $A=\left\{a_1, a_2, \cdots, a_N \right\}$.
 $$\begin{matrix}
 P(G_t|S_t=s)& = &\frac{P(G_t, \;S_t=s)}{P(S_t=s)} & \text{By Bayes' Theorem} \\ 
  & = & \frac{P(G_t, \;S_t=s, \;A_t=a_1)+\cdots+P(G_t, \;S_t=s, \;A_t=a_N)}{P(S_t=s, \;A_t=a_1)+\cdots+P(S_t=s, \;A_t=a_N)} & \text{By Sum Rule} \\
- & = & \frac{P(G_t, \;S_t=s, \;A_t=a_1)}{P(S_t=s, \;A_t=a_1)+\cdots+P(S_t=s, \;A_t=a_N)}+\cdots+\frac{P(G_t, \;S_t=s, \;A_t=a_1)}{P(S_t=s, \;A_t=a_1)+\cdots+P(S_t=s, \;A_t=a_N)} & \text{By 분모나누기} \\
+ & = & \frac{P(G_t, \;S_t=s, \;A_t=a_1)}{P(S_t=s, \;A_t=a_1)+\cdots+P(S_t=s, \;A_t=a_N)}+\cdots+\frac{P(G_t, \;S_t=s, \;A_t=a_N)}{P(S_t=s, \;A_t=a_1)+\cdots+P(S_t=s, \;A_t=a_N)} & \text{By 분모나누기} \\
  & = & P(G_t|S_t=s, \;A_t=a_1)+\cdots+P(G_t|S_t=s, \;A_t=a_N) & \text{By Bayes' Theorem} \\
  & = & \sum_{k=1}^{N}P(G_t|S_t=s, A_t=a_k) &&
 \end{matrix}$$
 
-Expectation 계산에서 확률부분에 위 성질들 대입하면 쉽게 증명된다.
+Expectation 계산에서 확률부분에 위 성질을 대입하면 쉽게 증명된다.
 </div>
 </details>
 
@@ -81,7 +81,7 @@ $\mu^{\pi}(s)$: Stationary distribution
 - 예를 들어 3가지 state $s_1, s_2, s_3$가 있다고 가정하자. Policy $\pi$를 따라서 에피소드를 진행하다보니 $s_1, s_2, s_3$가 각각 70번, 20번, 10번 등장했다고 하자. 그럼 $\mu^{\pi}(s_1)=\frac{70}{100}=0.7$, $\mu^{\pi}(s_2)=\frac{20}{100}=0.2$, $\mu^{\pi}(s_3)=\frac{10}{100}=0.1$이 된다.
     
 $\mathbf{x}(s)$: Feature vector of state $s$
-- 사실 state 자체는 구체적이지 않고 모호하다. state는 실수값인가? 혹은 벡터값인가? 그 어떤 설명에서도 "state가 실수이다." 또는 "state는 벡터다."라고 기술하지 않는다. $\mathbf{x}(s)$는 이런 모호한 state 를 구체적인 값으로 나타낼 수 있게 해준다. 예를 들어, 슈퍼마리오 게임에서 특정 state에 대한 feature vector를 만들자면 $[\text{마리오의 좌표}, \text{ 적의 좌표}, \text{ 적과의 거리}, \cdots]$ 가 될 수 있다. feature vector는 다음과 같이 표기할 수 있다.
+- 사실 state 자체는 구체적이지 않고 모호하다. state는 실수값인가? 혹은 벡터값인가? 그 어떤 설명에서도 "state가 실수이다." 또는 "state는 벡터다."라고 기술하지 않는다. $\mathbf{x}(s)$는 이런 모호한 state 를 구체적인 값으로 나타낼 수 있게 해준다. 예를 들어, 슈퍼마리오 게임에서 특정 state에 대한 feature vector를 만들자면 `[마리오의 좌표, 적의 좌표, 적과의 거리, ...]`가 될 수 있다. feature vector는 다음과 같이 표기할 수 있다.
 
 <div markdown="1" style="text-align: center">
 
