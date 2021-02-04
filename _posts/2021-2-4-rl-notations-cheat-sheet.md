@@ -52,9 +52,9 @@ $Q(s,a)$: Action-value function
 - $V(s)$와 마찬가지로 state $s$에서 시작하여 action $a$를 취하고 난 후 Policy를 따라가면 1개의 에피소드와 $G_t$ 값이 완성된다. 이 과정을 여러번 반복하여 얻은 $G_t$들의 평균으로 이해하면 된다.
 - state $s$에서 취할 수 있는 action들은 여러가지가 있을 것이다. 각 action $a$에 대한 $Q(s, a)$ 값들을 모두 구해 더하면 $V(s)$ 값이 된다. 즉, 
 
-<div markdown="1">
+<div markdown="1" style="text-align: center">
 
-$$V(s)=\sum_{a \in A}{Q(s, a)}$$
+$V(s)=\sum_{a \in A}{Q(s, a)}$
 </div>
 
 <details>
@@ -83,9 +83,11 @@ $\mu^{\pi}(s)$: Stationary distribution
 $\mathbf{x}(s)$: Feature vector of state $s$
 - 사실 state 자체는 구체적이지 않고 모호하다. state는 실수값인가? 혹은 벡터값인가? 그 어떤 설명에서도 "state가 실수이다." 또는 "state는 벡터다."라고 기술하지 않는다. $\mathbf{x}(s)$는 이런 모호한 state 를 구체적인 값으로 나타낼 수 있게 해준다. 예를 들어, 슈퍼마리오 게임에서 특정 state에 대한 feature vector를 만들자면 $[\text{마리오의 좌표}, \text{ 적의 좌표}, \text{ 적과의 거리}, \cdots]$ 가 될 수 있다. feature vector는 다음과 같이 표기할 수 있다.
 
-<div markdown="1">
+<div markdown="1" style="text-align: center">
 
-$$\mathbf{x}(s) = \begin{bmatrix}x_1(s) \\ x_2(s) \\ \vdots \\ x_n(s)\end{bmatrix}$$
+$\mathbf{x}(s) = 
+\begin{bmatrix}x_1(s) \\\ x_2(s) \\\ \vdots \\\ x_n(s)\end{bmatrix}
+$
 </div>
 
 - 각각의 $x_i$ 들은 state로부터 특징을 뽑아내는 함수이다. 예를 들어, 마리오의 좌표를 구해주는 함수, 적의 좌표를 구해주는 함수, 적과의 거리를 구해주는 함수이다.
