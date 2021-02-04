@@ -57,9 +57,9 @@ $Q(s,a)$: Action-value function
 $V(s)=\sum_{a \in A}{Q(s, a)}$
 </div>
 
-<details>
+<details style="width: 66.6666667%; overflow-x: auto;">
 <summary class="ex1" style="text-align: center"><h5>클릭하여 증명 펼치기</h5></summary>
-<div markdonw="1" style="width: 66.6666667%; overflow-x: auto;">
+<div markdonw="1">
     
 취할 수 있는 action이 n개가 있다고 가정하자. 즉, $A=\left\{a_1, a_2, \cdots, a_N \right\}$.
 $$\begin{matrix}
