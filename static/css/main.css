@@ -196,6 +196,19 @@ div.col-sm-3 img.profile-avatar {
   text-decoration: underline;
   display: inline;
 }
+
+.ex1 > p {
+  color: #3fa757;
+  cursor: pointer;
+  display: inline;
+}
+
+.ex1 > p:hover {
+  color: #B3B3B3;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+}
 /* Table Style */
 /* The code is based on https://stackoverflow.com/a/50939211/10258799 */
 table {
