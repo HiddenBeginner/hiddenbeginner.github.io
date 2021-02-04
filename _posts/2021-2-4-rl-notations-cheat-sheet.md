@@ -57,7 +57,7 @@ $Q(s,a)$: Action-value function
 $V(s)=\sum_{a \in A}{Q(s, a)}$
 </div>
 
-<details style="width: 66.6666667%; overflow-x: auto;">
+<details style="overflow-x: auto;">
 <summary class="ex1" style="text-align: center"><h5>클릭하여 증명 펼치기</h5></summary>
 <div markdonw="1">
     
