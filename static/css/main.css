@@ -197,13 +197,13 @@ div.col-sm-3 img.profile-avatar {
   display: inline;
 }
 
-.ex1 > p {
+.ex1 > span {
   color: #3fa757;
   cursor: pointer;
   display: inline;
 }
 
-.ex1 > p:hover {
+.ex1 > span:hover {
   color: #B3B3B3;
   cursor: pointer;
   text-decoration: underline;
