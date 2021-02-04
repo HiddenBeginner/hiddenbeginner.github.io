@@ -58,7 +58,7 @@ $V(s)=\sum_{a \in A}{Q(s, a)}$
 </div>
 
 <details class="ex1" style="text-align: center">
-<summary><dv>클릭하여 증명 펼치기</div></summary>
+<summary><span>클릭하여 증명 펼치기</span></summary>
 <div markdonw="1">
     
 취할 수 있는 action이 n개가 있다고 가정하자. 즉, $A=\left\{a_1, a_2, \cdots, a_N \right\}$.
