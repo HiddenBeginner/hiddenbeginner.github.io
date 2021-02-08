@@ -28,7 +28,11 @@ comments: true
 
 $s$: State
 
+<br/>
+
 $a$: Action
+
+<br/>
 
 $\pi$: Policy (정책)
 - Policy는 쉽게 말해서 주어진 상태 (state)에서 어떻게 행동 (action)할지 알려주는 **지침서**이다. 강화학습의 목적은 상황에 맞는 **최적의 지침서**를 찾는 것이다.
@@ -37,17 +41,17 @@ $\pi$: Policy (정책)
 - 가능한 state와 action 조합이 적을 때는 모든 조합마다 얻을 수 있는 Value function 값을 계산하여 표를 만들어놓는다. 이를 table-lookup 방식이라고 부른다. 메모리에 저장된 표를 보며 action을 선택하는 행위 또한 policy라고 이해할 수 있다.
 - 조합의 경우가 너무 많으면 true Policy $\pi$를 구하는 대신 매개변수로 표현되는 모델을 사용한다. $\theta$로 매개변수화된 policy는 $\pi_\theta$ 으로 표기한다. 
 
-$G_t$: Return
+<br/>$G_t$: Return
 - $G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots = \sum_{k=0}^\infty{\gamma^k R_{t+k+1}}$
 - $t$ 시점 이후로 Policy를 따라 에피소드를 진행했을 때 얻는 보상들의 합 (시간 경과에 따른 discounted 적용)
 - 강화학습은 단순히 "현재 state에서 reward 가장 많이 주는 액션을 취하는 것"이 아니다. 미래의 보상까지 고려하는 "Return 값이 가장 높은 액션을 취하는 것"이다.
     
-$V(s)$: State-value function
+<br/>$V(s)$: State-value function
 - $V(s)=\mathbb{E}[G_t \mid S_t=s]$
 - 현재 state $s$ 이후로 Policy를 따라 에피소드를 진행했을 때 얻게 되는 return의 기댓값
 - state $s$ 에서 시작하여 Policy를 따라가면 1개의 에피소드가 만들어지고 대응하는 $G_t$ 값이 산출된다. 이 과정을 여러번 반복하면 여러 에피소드와 여러 $G_t$가 만들어질텐데 그것의 평균으로 이해하면 된다. (이 설명은 표본평균에 대한 이야기고, 실제 기대값은 알 수 없는 모수로서 표본평균으로 추정을 한다.)
         
-$Q(s,a)$: Action-value function
+<br/>$Q(s,a)$: Action-value function
 - $Q(s, a)=\mathbb{E}[G_t \mid S_t=s, A_t=a]$
 - 현재 state $s$에서 action $a$를 취한 이후로 Policy를 따라 에피소드를 진행했을 때 얻게 되는 return의 기댓값
 - $V(s)$와 마찬가지로 state $s$에서 시작하여 action $a$를 취하고 난 이후에 Policy를 따라가면 1개의 에피소드와 $G_t$ 값이 완성된다. 이 과정을 여러번 반복하여 얻은 $G_t$들의 평균으로 이해하면 된다.
@@ -77,11 +81,11 @@ Expectation 계산에서 확률부분에 위 성질을 대입하면 쉽게 증�
 
 <br/>
 
-$\mu^{\pi}(s)$: Stationary distribution
+<br/>$\mu^{\pi}(s)$: Stationary distribution
 - Policy $\pi$를 따라 에피소드를 진행했을 때, state $s$가 등장할 확률로 이해하면 쉽다.
 - 예를 들어 3가지 state $s_1, s_2, s_3$가 있다고 가정하자. Policy $\pi$를 따라서 에피소드를 진행하다보니 $s_1, s_2, s_3$가 각각 70번, 20번, 10번 등장했다고 하자. 그럼 $\mu^{\pi}(s_1)=\frac{70}{100}=0.7$, $\mu^{\pi}(s_2)=\frac{20}{100}=0.2$, $\mu^{\pi}(s_3)=\frac{10}{100}=0.1$이 된다.
     
-$\mathbf{x}(s)$: Feature vector of state $s$
+<br/>$\mathbf{x}(s)$: Feature vector of state $s$
 - 사실 state 자체는 구체적이지 않고 모호하다. state는 실수값인가? 혹은 벡터값인가? 그 어떤 설명에서도 "state가 실수이다." 또는 "state는 벡터다."라고 기술하지 않는다. $\mathbf{x}(s)$는 이런 모호한 state 를 구체적인 값으로 나타낼 수 있게 해준다. 예를 들어, 슈퍼마리오 게임에서 특정 state에 대한 feature vector를 만들자면 `[마리오의 좌표, 적의 좌표, 적과의 거리, ...]`가 될 수 있다. feature vector는 다음과 같이 표기할 수 있다.
 
 <div markdown="1" style="text-align: center">
@@ -95,11 +99,11 @@ $
 - state와 $\mathbf{x}(s)$는 엄격하게 구분하지 않고 사용되는 것 같다.
 - state $s$에서 가능한 action $a$까지 사용하여 feature vector를 만들 수도 있다. $\mathbf{x}(s, a)$
 
-`off-policy learning`: 에피소드를 만들어나가는 Policy (`behavior policy`)와 학습에 사용되는 Policy (`target policy`)를 따로 사용하는 학습 방법
+<br/>`off-policy learning`: 에피소드를 만들어나가는 Policy (`behavior policy`)와 학습에 사용되는 Policy (`target policy`)를 따로 사용하는 학습 방법
 - 배경: 우리는 Optimal한 행동들로 이루어진 에피소드를 사용 (`exploitation`) 하여 action-value를 추정해야 한다. 하지만, 더 좋은 행동이 있는지 탐색 (`exploration`) 하기 위해서는 Optimal하지 않은 행동들을 해야 한다. 이와 같은 `exploration-exploitation dilemma` 를 해결할 수 있는 가장 직관적인 방법은 2가지 Policy를 사용하는 것이다. 하나의 policy는 optimal policy를 찾기 위해 학습에 사용되며 이를 `target policy`라고 부른다. 다른 하나는 보다 더 탐색적으로 action들을 취하여 데이터를 만들며, `behavior policy`라고 부른다.
 - `target policy`를 벗어난 (off) 데이터를 policy 학습에 사용한다고 하여 `off-policy learning`이라고 부른다.
 > *In this case we say that learning is from data “off” the target policy, and
-the overall process is termed o↵-policy learning.*
+the overall process is termed off-policy learning.*
 - `Target policy`에서 벗어난 데이터를 학습에 사용하기 때문에 수렴이 느리고 학습 동안 큰 variance를 가질 수 있다.
 - `off-policy learning`이 보다 더 포괄적인 개념이라고 할 수 있다. `on-policy learning`는 `behavior policy` 와 `target policy`가 같은 경우라고 해석할 수 있다.
 
@@ -118,8 +122,3 @@ the overall process is termed o↵-policy learning.*
 
 ### Source code
 - Github [https://github.com/seungeunrho/minimalRL](https://github.com/seungeunrho/minimalRL)
-
-
-```python
-
-```
