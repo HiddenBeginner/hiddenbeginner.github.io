@@ -21,6 +21,7 @@ comments: true
 
 **들어가기 전에**
 - 이 글은 지속적으로 업데이트 됩니다.
+- 원하시는 키워드를 `Ctrl`+`F`로 찾아서 선택적으로 읽는 방법을 추천드립니다.
 - [Richard S. Sutton and Andrew G. Barto, *Reinforcement Learning: an introduction*, 2017](https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf)의 표기법을 최대한 따랐습니다.
 
 ---
@@ -96,10 +97,21 @@ $
 
 ---
 
-## 참고문헌
+## 강화학습 아카이브
 사실 이 글을 작성하며 내 지식은 거의 들어가지 않았다. 이 글의 모든 내용은 다음 참고문헌들을 기반으로 작성하였다. 모든 참고문헌 작성자들에게 감사의 인사를 전하고 싶다.
 
+### Video
 - Video [강화학습의 기초 이론, 팡요랩](https://youtube.com/playlist?list=PLpRS2w0xWHTcTZyyX8LMmtbcMXpd3s4TU)
-- Github [https://github.com/seungeunrho/minimalRL](https://github.com/seungeunrho/minimalRL)
+
+### Reading Material
 - Slide [Introduction to Reinforcement Learning with David Silver](https://www.davidsilver.uk/teaching/)
 - Book [Richard S. Sutton and Andrew G. Barto, *Reinforcement Learning: an introduction*, 2017](https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf)
+- Paper [Silver, D., Lever, G., Heess, N., Degris, T., Wierstra, D. & Riedmiller, M.. (2014). Deterministic Policy Gradient Algorithms. Proceedings of the 31st International Conference on Machine Learning, in PMLR 32(1):387-395](http://proceedings.mlr.press/v32/silver14.pdf?CFID=6293331&CFTOKEN=eaaee2b6cc8c9889-7610350E-DCAB-7633-E69F572DC210F301)
+
+### Source code
+- Github [https://github.com/seungeunrho/minimalRL](https://github.com/seungeunrho/minimalRL)
+
+
+```python
+
+```
