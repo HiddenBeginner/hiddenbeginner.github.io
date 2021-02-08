@@ -95,6 +95,14 @@ $
 - state와 $\mathbf{x}(s)$는 엄격하게 구분하지 않고 사용되는 것 같다.
 - state $s$에서 가능한 action $a$까지 사용하여 feature vector를 만들 수도 있다. $\mathbf{x}(s, a)$
 
+`off-policy learning`: 에피소드를 만들어나가는 Policy (`behavior policy`)와 학습에 사용되는 Policy (`target policy`)를 따로 사용하는 학습 방법
+- 배경: 우리는 Optimal한 행동들로 이루어진 에피소드를 사용 (`exploitation`) 하여 action-value를 추정해야 한다. 하지만, 더 좋은 행동이 있는지 탐색 (`exploration`) 하기 위해서는 Optimal하지 않은 행동들을 해야 한다. 이와 같은 `exploration-exploitation dilemma` 를 해결할 수 있는 가장 직관적인 방법은 2가지 Policy를 사용하는 것이다. 하나의 policy는 optimal policy를 찾기 위해 학습에 사용되며 이를 `target policy`라고 부른다. 다른 하나는 보다 더 탐색적으로 action들을 취하여 데이터를 만들며, `behavior policy`라고 부른다.
+- `target policy`를 벗어난 (off) 데이터를 policy 학습에 사용한다고 하여 `off-policy learning`이라고 부른다.
+> *In this case we say that learning is from data “off” the target policy, and
+the overall process is termed o↵-policy learning.*
+- `Target policy`에서 벗어난 데이터를 학습에 사용하기 때문에 수렴이 느리고 학습 동안 큰 variance를 가질 수 있다.
+- `off-policy learning`이 보다 더 포괄적인 개념이라고 할 수 있다. `on-policy learning`는 `behavior policy` 와 `target policy`가 같은 경우라고 해석할 수 있다.
+
 ---
 
 ## 강화학습 아카이브
