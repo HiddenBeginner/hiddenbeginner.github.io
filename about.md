@@ -5,7 +5,10 @@ permalink: /about/
 use_math: true
 ---
 ### 인사글 
-안녕하세요. 이동진입니다. 이 블로그 뿐만 아니라 케글에도 간간히 [커널글](https://www.kaggle.com/micajoumathematics) 들을 올리고 있으니 놀러와주세요~!<br/> 
+안녕하세요. 포항공과대학교 인공지능대학원에서 석·박사통합과정을 밟고 있는 이동진이라고 합니다. 
+[POSTECH MinDS](minds.postech.ac.kr) (수리 데이터과학 연구소)에 소속되어 있으며, 최근에는 **강화학습을 이용한 비선형 편미분방정식 풀이**와 
+**머신러닝에 위상수학적 데이터 분석론을 접합하는 방법**을 연구하고 있습니다.
+이 블로그 뿐만 아니라 케글에도 간간히 [커널글](https://www.kaggle.com/micajoumathematics) 들을 올리고 있으니 놀러와주세요~!<br/> 
 
 ---
 
@@ -13,11 +16,13 @@ use_math: true
 
 #### 주요이력
 
-**2013년 3월 ~ 2020년 2월** 아주대학교 수학과 (학부)
+**2013년 3월 ~ 2020년 2월** 아주대학교 수학과 학사 졸업 (4.38 / 4.5)
 
-**2014년 7월 ~ 2016년 4월** 육군 병장 만기전역
+**2014년 7월 ~ 2016년 4월** 육군 병장 만기전역 (몸과 마음 건강)
 
 **2020년 3월 ~ 2020년 6월** 아주대학교 인공지능·데이터사이언스학과 석사 (1학기 중퇴)
+
+**2021년 2월 ~** 포항공과대학교 인공지능대학원 석·박사통합과정
 
 <br/>
 
@@ -67,6 +72,9 @@ use_math: true
 - [AdamW: Decoupled weight decay regularization](https://youtu.be/-Sd_zH_LHBo)
 - [Visualizing data using t-SNE](https://youtu.be/zCYKD3YfcSM)
 - [Sharp Minima Can Generalize For Deep Nets](https://youtu.be/5E9SFe5WU1s)
+
+**2021년 2월 ~** 온라인 케글 스터디
+- 도서: [데이콘 경진대회 1등 솔루션](https://wikibook.co.kr/dacon/)
 </div>
 </details>
 
