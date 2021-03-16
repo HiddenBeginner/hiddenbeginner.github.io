@@ -57,7 +57,7 @@ $\pi$: Policy (정책)
 - $q_\pi(s, a)=\mathbb{E}_\pi[G_t \mid S_t=s, A_t=a]$
 - 현재 state $s$에서 action $a$를 취한 이후로 Policy $\pi$를 따라 에피소드를 진행했을 때 얻게 되는 return의 기댓값
 - state $s$에서 시작하여 action $a$를 취하고 난 이후에 Policy $\pi$ 를 따라 진행하면 1개의 에피소드와 $G_t$ 값이 완성된다. 이 과정을 여러번 반복하여 얻은 $G_t$들의 평균으로 이해하면 된다.
-- 일반적으로 $q_\pi$는 알 수 없는 모수이기 때문에 다양한 방법으로 $=q_\pi$ 를 추정하게 된다. $q_\pi$의 추정치는 $Q_\pi$로 적어주게 된다.
+- 일반적으로 $q_\pi$는 알 수 없는 모수이기 때문에 다양한 방법으로 $q_\pi$ 를 추정하게 된다. $q_\pi$의 추정치는 $Q_\pi$로 적어주게 된다.
 - state $s$에서 취할 수 있는 action들은 여러가지가 있을 것이다. 각 action $a$에 대한 $q_\pi(s, a)$ 값들을 모두 구해 더하면 $v_\pi(s)$ 값이 된다. 즉, 
 
 <div markdown="1" style="text-align: center">
