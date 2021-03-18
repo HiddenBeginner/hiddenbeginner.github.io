@@ -6,7 +6,7 @@ use_math: true
 ---
 ### 인사글 
 안녕하세요. 포항공과대학교 인공지능대학원에서 석·박사통합과정을 밟고 있는 이동진이라고 합니다. 
-[POSTECH MinDS](minds.postech.ac.kr) (수리 데이터과학 연구소)에 소속되어 있으며, 최근에는 **강화학습을 이용한 비선형 편미분방정식 풀이**와 
+[POSTECH MinDS](https://minds.postech.ac.kr) (수리 데이터과학 연구소)에 소속되어 있으며, 최근에는 **강화학습을 이용한 비선형 편미분방정식 풀이**와 
 **머신러닝에 위상수학적 데이터 분석론을 접합하는 방법**을 연구하고 있습니다.
 이 블로그 뿐만 아니라 케글에도 간간히 [커널글](https://www.kaggle.com/micajoumathematics) 들을 올리고 있으니 놀러와주세요~!<br/> 
 
@@ -57,14 +57,16 @@ use_math: true
 </summary>
 <div markdown="1">
 
-**2019년 3월 ~ 2019년 12월** 아주대학교 수학과 산업수학 소학회 MiC 창설 및 부회장으로 활동
+**2021년 3월 ~** [POSTECH SIAM Student Chapter](https://minds.postech.ac.kr/postechstudentchapter) 부회장
 
-- 산업수학, 데이터 분석, 인공지능 분야에 관심있는 학생들을 위한 커뮤니티의 필요성을 느끼고 소학회를 창설하고 부회장으로 활동
-- 다음과 같은 활동에 멘토로 참여
-  - 케글 타이타닉 탑승객 데이터 분석 및 예측 모델 개발
-  - 피부병 데이터 HMNIST 데이터 시각화 및 예측 모델 개발(CNN)
-  - 케글 Understanding Clouds from Satellite Image 참여
-  - 머신러닝 알고리즘 강의
+- `POSTECH SIAM Student Chapter`는 미국의 응용산업수학 학회 [SIAM](https://siam.org)과 포스텍 수리 데이터과학 연구소의 지원을 받아 운영되는 학생 조직입니다.
+
+**2021년 3월 ~** 포스텍 강화학습 스터디
+
+- 도서: [Grokking Deep Reinforcement Learning ](https://www.manning.com/books/grokking-deep-reinforcement-learning)
+
+**2021년 2월 ~** 온라인 케글 스터디
+- 도서: [데이콘 경진대회 1등 솔루션](https://wikibook.co.kr/dacon/)
 
 **2019년 9월 ~ 2020년 9월** [딥러닝 논문 읽기 모임](https://github.com/Lilcob/-DL_PaperReadingMeeting/blob/master/readme.md)
 
@@ -73,8 +75,14 @@ use_math: true
 - [Visualizing data using t-SNE](https://youtu.be/zCYKD3YfcSM)
 - [Sharp Minima Can Generalize For Deep Nets](https://youtu.be/5E9SFe5WU1s)
 
-**2021년 2월 ~** 온라인 케글 스터디
-- 도서: [데이콘 경진대회 1등 솔루션](https://wikibook.co.kr/dacon/)
+**2019년 3월 ~ 2019년 12월** 아주대학교 수학과 산업수학 소학회 MiC 창설 및 부회장으로 활동
+
+- 산업수학, 데이터 분석, 인공지능 분야에 관심있는 학생들을 위한 커뮤니티의 필요성을 느끼고 소학회를 창설하고 부회장으로 활동
+- 다음과 같은 활동에 멘토로 참여
+  - 케글 타이타닉 탑승객 데이터 분석 및 예측 모델 개발
+  - 피부병 데이터 HMNIST 데이터 시각화 및 예측 모델 개발(CNN)
+  - 케글 Understanding Clouds from Satellite Image 참여
+  - 머신러닝 알고리즘 강의
 </div>
 </details>
 
