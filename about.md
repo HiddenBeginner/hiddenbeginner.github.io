@@ -59,7 +59,9 @@ use_math: true
 
 **2021년 3월 ~** [POSTECH SIAM Student Chapter](https://minds.postech.ac.kr/postechstudentchapter) 부회장
 
-- `POSTECH SIAM Student Chapter`는 미국의 응용산업수학 학회 [SIAM](https://siam.org)과 포스텍 수리 데이터과학 연구소의 지원을 받아 운영되는 학생 조직입니다.
+- `POSTECH SIAM Student Chapter`는 미국의 응용산업수학 학회 [SIAM](https://siam.org)과 포스텍 수리 데이터과학 연구소의 지원을 받아 운영되는 학술교류단체로서
+포스텍 내 응용산업수학 분야의 활발한 학술교류를 위한 커뮤니티를 활성화시키는 것을 목표로 하고 있습니다. 
+- **2021년 4월 24일 ~ 2021년 4월 25일** [북경대학교 SIAM Student Chapter 와의 연합 컨퍼런스](http://minds.postech.ac.kr/conference-workshop/postech-peking-joint-siam-student-chapter-conference-2021/) 조직위원회
 
 **2021년 3월 ~** 포스텍 강화학습 스터디
 
