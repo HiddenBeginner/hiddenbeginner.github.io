@@ -127,9 +127,10 @@ the overall process is termed off-policy learning.*
 이때, 탐색이 충분하지 않았다면 가장 좋은 슬롯머신 아닌 엄한 슬롯머신을 선택할 위험이 생긴다. 반대로 탐색에 너무 많은 시간을 소비한다면 가장 좋은 슬롯머신을 작동시킬 기회가 줄어들게 된다.<br/>
 
 <br/>`Regret`: MAB 문제에서 agent들의 성능을 비교하기 위한 평가지표 중 하나이다. 처음부터 가장 좋은 슬롯머신을 작동시켜 얻을 수 있는 실제 총 reward 값과 agent의 전략에 따라 슬롯머신을 작동시켜 얻은 실제 reward 값의 차이이다. 즉,
+
 <div markdown="1" style="text-align: center">
 
-$\text{Regret } \mathcal{T}=\mu_*n-\sum\limits_{i=1}^{K}\mu_i\mathbb{E}[T_i(n)]=\sum\limits_{i=1}^K(\mu_*-\mu_i)T_i(n)$
+$\text{Regret } \mathcal{T}=\mu_*n-\sum\limits_{i=1}^{K}\mu_i\mathbb{E} [T_i(n)] = \sum\limits_{i=1}^K(\mu_{＊}-\mu_i)T_i(n)$
 </div>
 
 이때, 총 $K$개의 슬롯머신이 있으며 $n$번의 시행 (슬롯머신 작동)이 있는 것이다. 그리고 $\mu_*$는 가장 좋은 슬롯머신이 주는 기대 보상이며 $\mu_i$는 $i$번 째 슬롯머신이 주는 기대 보상이다. 마지막으로 $T_i(n)$은 $i$번 째 슬롯머신을 작동시킨 횟수이다. 물론 이 regret은 각 슬롯머신들의 기대 보상 $\mu_i$들을 안다는 가정하에 계산할 수 있다. MAB의 목적은 이 regret을 최소화시키는 것이다. 설명이 복잡했지만 **agent의 전략의 기회비용** 쯤으로 이해하면 된다.
@@ -154,8 +155,3 @@ $\text{Regret } \mathcal{T}=\mu_*n-\sum\limits_{i=1}^{K}\mu_i\mathbb{E}[T_i(n)]=
 
 ### Source code
 - Github [https://github.com/seungeunrho/minimalRL](https://github.com/seungeunrho/minimalRL)
-
-
-```python
-
-```
