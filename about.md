@@ -67,7 +67,7 @@ use_math: true
 
 - 도서: [Grokking Deep Reinforcement Learning ](https://www.manning.com/books/grokking-deep-reinforcement-learning)
 
-**2021년 2월 ~** 온라인 케글 스터디
+**2021년 2월 ~ 2021년 4월** 
 - 도서: [데이콘 경진대회 1등 솔루션](https://wikibook.co.kr/dacon/)
 
 **2019년 9월 ~ 2020년 9월** [딥러닝 논문 읽기 모임](https://github.com/Lilcob/-DL_PaperReadingMeeting/blob/master/readme.md)
