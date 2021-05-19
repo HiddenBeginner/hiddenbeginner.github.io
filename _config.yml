@@ -36,6 +36,8 @@ urls:
 #      url: /projects/
     - text: Publications
       url: /publications/
+    - text: Donors
+      url: /donors/
 
 url: "https://hiddenbeginner.github.io"
 baseurl: ""
