@@ -60,30 +60,12 @@ $\pi$: Policy (정책)
 - 현재 state $s$에서 action $a$를 취한 이후로 Policy $\pi$를 따라 에피소드를 진행했을 때 얻게 되는 return의 기댓값
 - state $s$에서 시작하여 action $a$를 취하고 난 이후에 Policy $\pi$ 를 따라 진행하면 1개의 에피소드와 $G_t$ 값이 완성된다. 이 과정을 여러번 반복하여 얻은 $G_t$들의 평균으로 이해하면 된다.
 - 일반적으로 $q_\pi$는 알 수 없는 모수이기 때문에 다양한 방법으로 $q_\pi$ 를 추정하게 된다. $q_\pi$의 추정치는 $Q_\pi$로 적어주게 된다.
-- state $s$에서 취할 수 있는 action들은 여러가지가 있을 것이다. 각 action $a$에 대한 $q_\pi(s, a)$ 값들을 모두 구해 더하면 $v_\pi(s)$ 값이 된다. 즉, 
+- state $s$에서 취할 수 있는 action들은 여러가지가 있을 것이다. 각 action $a$에 대한 $q_\pi(s, a)$ 값들의 평균을 구하면 $v_\pi(s)$ 값이 된다. 즉, 
 
 <div markdown="1" style="text-align: center">
 
-$v_\pi(s)=\sum_{a \in A}{q_\pi(s, a)}$
+$v_\pi(s)=\sum_{a \in A}\pi(a|s){q_\pi(s, a)}$
 </div>
-
-<details style="overflow-x: auto;">
-<summary class="ex1" style="text-align: center"><h5>클릭하여 증명 펼치기</h5></summary>
-<div markdonw="1">
-    
-취할 수 있는 action이 n개가 있다고 가정하자. 즉, $A=\left\{a_1, a_2, \cdots, a_N \right\}$.
-$$\begin{matrix}
-P(G_t|S_t=s)& = &\frac{P(G_t, \;S_t=s)}{P(S_t=s)} & \text{By Bayes' Theorem} \\ 
- & = & \frac{P(G_t, \;S_t=s, \;A_t=a_1)+\cdots+P(G_t, \;S_t=s, \;A_t=a_N)}{P(S_t=s, \;A_t=a_1)+\cdots+P(S_t=s, \;A_t=a_N)} & \text{By Sum Rule} \\
- & = & \frac{P(G_t, \;S_t=s, \;A_t=a_1)}{P(S_t=s, \;A_t=a_1)+\cdots+P(S_t=s, \;A_t=a_N)}+\cdots+\frac{P(G_t, \;S_t=s, \;A_t=a_N)}{P(S_t=s, \;A_t=a_1)+\cdots+P(S_t=s, \;A_t=a_N)} & \text{By 분모나누기} \\
- & = & P(G_t|S_t=s, \;A_t=a_1)+\cdots+P(G_t|S_t=s, \;A_t=a_N) & \text{By Bayes' Theorem} \\
- & = & \sum_{k=1}^{N}P(G_t|S_t=s, A_t=a_k) &&
-\end{matrix}$$
-
-Expectation 계산에서 확률부분에 위 성질을 대입하면 쉽게 증명된다.
-</div>
-</details>
-
 <br/>
 
 <br/>$\mu^{\pi}(s)$: Stationary distribution
