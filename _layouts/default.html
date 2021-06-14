@@ -118,9 +118,9 @@ layout: compress
     {% endif %}
   </head>
   <body>
-    <div class="container" style="width: 100%">
-      <div class="col-sm-3" style="margin-left: 30px;">
-        <div class="fixed-condition" style="max-width: 280px">
+    <div class="container-fluid" style="max-width: 1400px; margin: auto;">
+      <div class="col-sm-3">
+        <div class="fixed-condition">
           <a href="/"><img class="profile-avatar" src="{{ site.avatar_url }}" height="75px" width="75px" /></a>
           <h1 class="author-name">{{ site.author }}</h1>
           {% if site.about %}
@@ -150,7 +150,7 @@ layout: compress
         </div>
         <!-- end /.fixed-condition -->
       </div>
-      <div class="col-sm-8 col-offset-1 main-layout" style="width: 50.0%; text-align: justify; ">
+      <div class="col-sm-8 col-offset-1 main-layout" style="text-align: justify; ">
         {{ content }}
         <footer>
           &copy; {{ site.author }}
