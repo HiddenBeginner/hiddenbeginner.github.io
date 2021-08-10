@@ -242,4 +242,22 @@ tr:hover {
     background: silver;
     cursor: pointer;
 }
+
+.note-box {
+  border-radius: .4em;
+  box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%);
+  margin: 1.5625em auto;
+  padding: 0 .6rem .8rem!important;
+  overflow: hidden;
+  page-break-inside: avoid;
+  border-left: .2rem rgb(243 208 96 / 100%) solid;
+}
+
+.note-box-title {
+  background-color: rgb(243 208 96 / 10%);
+  position: relative;
+  margin: 0 -.6rem!important;
+  padding: .4rem .6rem .4rem 2rem;
+  font-weight: 700;
+}
 /* ==== End Custom Style ==== */
