@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[딥러닝]빠른 텐서 연산을 위한 자료구조"
+title:  "[딥러닝] 빠른 텐서 연산을 위한 자료구조"
 date:   2020-1-21 1:00
 categories: [DeepLearning]
 use_math: true

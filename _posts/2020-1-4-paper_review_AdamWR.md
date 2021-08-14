@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[논문 리뷰]AdamWR에 대해 알아보자! Decoupled weight decay regularization 논문 리뷰(2)"
+title:  "[논문 리뷰] AdamWR에 대해 알아보자! Decoupled weight decay regularization 논문 리뷰(2)"
 date:   2020-1-4 18:30
 categories: [DeepLearning, PaperReview]
 use_math: true
