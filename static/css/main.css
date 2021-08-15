@@ -264,4 +264,9 @@ tr:hover {
   padding: .4rem .6rem .4rem 2rem;
   font-weight: 700;
 }
+
+.note-box > p {
+  margin-left: 15px;
+  margin-top: 15px;
+}
 /* ==== End Custom Style ==== */
