@@ -24,11 +24,18 @@ h1, h2, h3 {
 }
 h1 {
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 28px;
 }
-h2, h3 {
+h2 {
+  font-size: 24px;
   margin-bottom: 5px;
 }
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
 a, a:link, a:active {
   text-decoration: none;
   color: #3fa757;
@@ -110,7 +117,7 @@ div.col-sm-3 strong {
 }
 div.col-sm-3 div.profile-about {
   margin-top: 10px;
-  color: #8C8C8C;
+  color: #212121;
 }
 div.col-sm-3 img.profile-avatar {
   border-radius: 150px;
