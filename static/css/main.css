@@ -19,7 +19,7 @@ span.time, span.categories {
   font-size: 11px;
 }
 h1, h2, h3 {
-  color: #696969;
+  color: #131313;
   font-weight: normal;
 }
 h1 {
@@ -28,12 +28,12 @@ h1 {
 }
 h2 {
   font-size: 24px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 h3 {
   font-size: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 a, a:link, a:active {
