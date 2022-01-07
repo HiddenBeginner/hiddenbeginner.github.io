@@ -57,13 +57,20 @@ use_math: true
 </summary>
 <div markdown="1">
 
-**2021년 3월 ~** [POSTECH SIAM Student Chapter](https://minds.postech.ac.kr/postechstudentchapter) 부회장
+**2021년 7월 ~ 2021년 12월** 가짜연구소 3기 `Graph + ML = ?` 러너
+
+- 도서: [Graph Representation Learning Book](https://www.cs.mcgill.ca/~wlh/grl_book/)
+- 강의: [CS224W](https://www.youtube.com/playlist?list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn)
+
+**2021년 3월 ~ 2021년 12월** [POSTECH SIAM Student Chapter](https://minds.postech.ac.kr/postechstudentchapter) 부회장
 
 - `POSTECH SIAM Student Chapter`는 미국의 응용산업수학 학회 [SIAM](https://siam.org)과 포스텍 수리 데이터과학 연구소의 지원을 받아 운영되는 학술교류단체로서
 포스텍 내 응용산업수학 분야의 활발한 학술교류를 위한 커뮤니티를 활성화시키는 것을 목표로 하고 있습니다. 
 - **2021년 4월 24일 ~ 2021년 4월 25일** [북경대학교 SIAM Student Chapter 와의 연합 컨퍼런스](http://minds.postech.ac.kr/conference-workshop/postech-peking-joint-siam-student-chapter-conference-2021/) 조직위원회
+- **2021년 7월 23일 ~ 2021년 7월 24일** [2021 PSSC Summer School - Anomaly Detection and Robust Random Cut Forest](https://minds.postech.ac.kr/postechstudentchapter/summerschool2021/) 조직위원회 및 파이썬 기초 강연
+- **2021년 12월 28일 ~ 2021년 12월 30일 / 2022년 01월 03일 ~ 2022년 01월 05일** [2022 PSSC MCM Camp](https://pssc2021.notion.site/2022-PSSC-MCM-Camp-a40304ca44154dea8706fd1c6fd6ad1f) 조직위원회 및 셀룰러 오토마타를 활용한 수학 모델링 강연
 
-**2021년 3월 ~** 포스텍 강화학습 스터디
+**2021년 3월 ~ 2021년 6월** 포스텍 강화학습 스터디
 
 - 도서: [Grokking Deep Reinforcement Learning ](https://www.manning.com/books/grokking-deep-reinforcement-learning)
 
@@ -95,6 +102,11 @@ use_math: true
 <h4>대회 참여 및 수상 경력</h4>
 </summary>
 <div markdown="1">
+
+**2021년 8월 ~ 2021년 9월** [Samsung AI Challenge for Scientific Discovery](https://dacon.io/competitions/official/235789/overview/description), 삼성전자 종합기술운 & Dacon
+- 대회 주제: 주어진 분자의 SMILES 구조식을 이용하여 분자의 성질 (`ST1 Gap`) 예측
+- 해결 방법: Relational GCN + Fold Ensemble
+- 결과: 21등 / 220등, [github](https://github.com/HiddenBeginner/samsung-ai-challenge)
 
 **2020년 11월** [공공데이터 활용 수력 댐 강우예측 AI 경진대회](https://dacon.io/competitions/official/235646/overview/), 한국수력원자력(주) & Dacon
 - 대회 주제: 기상 레이더에서 관측한 구름(반사도) 이미지 데이터를 이용하여, 미래의 구름(반사도) 이미지 예측
