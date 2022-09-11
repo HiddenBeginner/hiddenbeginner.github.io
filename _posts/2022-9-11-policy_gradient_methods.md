@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "허구한 날 까먹는 Policy gradient theorem 정리"
+title:  "[강화학습] 허구한 날 까먹는 Policy gradient theorem 정리"
 date:   2022-9-11 21:00
 categories: [RL]
 use_math: true

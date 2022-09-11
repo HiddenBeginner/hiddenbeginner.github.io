@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "나의 강화학습 회고록 (부제: 왜 강화학습은 현실에서 잘 사용되지 않는가?)"
+title:  "[강화학습] 나의 강화학습 회고록 (부제: 왜 강화학습은 현실에서 잘 사용되지 않는가?)"
 date:   2022-9-2 22:00
 categories: [RL, Others]
 use_math: true
