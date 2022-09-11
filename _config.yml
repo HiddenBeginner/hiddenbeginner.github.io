@@ -24,6 +24,8 @@ social:
       link: "https://www.linkedin.com/in/hiddenbeginner"
     - icon: fa-facebook
       link: "https://www.facebook.com/hiddenbeginner"
+    - icon: fa-instagram
+      link: "https://www.instagram.com/jin_dong2/"
 
 share:
   twitter_username: github.io
