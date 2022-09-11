@@ -12,7 +12,6 @@ tagarray: []
 enableCat: true
 catarray: []
 
-disqus_shortname: hiddenbeginner
 collections:
   project:
     output: true
