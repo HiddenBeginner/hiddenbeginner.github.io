@@ -161,14 +161,31 @@ $$\mathbf{\theta}_{\text{new}}=\mathbf{\theta}_{\text{old}} + \alpha \left(  G_t
 
 <br>
 
-여기서 주의할 점은 베이스라인을 사용할 경우 정책 $\pi_{\mathbf{\theta}}$와 상태가치함수 $\hat{v}\_{\mathbf{w}}$ 둘 다 학습하게 되는데, 그렇다고 이를 actor-critic 방법이라고 부르지는 않는다. 상태가치함수 $\hat{v}\_{\mathbf{w}}$가 그냥 단순히 베이스라인으로만 사용되었고, 정책의 가치함수를 평가하지는 않는다. $G_t$를 사용해서 $\hat{v}\_{\mathbf{w}}$를 업데이트하긴 하지만 정책의 가치함수의 벨만 에러를 평가하지는 않는다. 이후 볼 actor-critic 가치함수를 사용하여 벨만 에러를 계산하여 정책의 가치함수를 평가한다.
+여기서 주의할 점은 베이스라인을 사용할 경우 정책 $\pi_{\mathbf{\theta}}$와 상태가치함수 $\hat{v}\_{\mathbf{w}}$ 둘 다 학습하게 되는데, 그렇다고 이를 actor-critic 방법이라고 부르지는 않는다. 상태가치함수 $\hat{v}\_{\mathbf{w}}$가 그냥 단순히 베이스라인으로만 사용되고, 비평가 (critic)으로 사용되지 않기 때문이다. <span style="color: red">쉽게 이해하기 위한 설명 추가 필요</span>
 
 <br>
 
 ---
 
 ## 4. Actor-Critic Methods
-다음 시간에 계속 ...
+REINFORCE는 실제 그레디언트를 추정하기 위해 Monte Carlo 방법론을 사용하였다. Monte Carlo 방법은 unbiased 하지만 분산이 커서 좋은 정책으로 수렴하기까지 오랜 시간이 필요하다. 한편, REINFORCE 업데이트식에는 return $G_t$를 포함하고 있기 때문에 반드시 에피소드가 종료된 후에 파라미터를 업데이트시킬 수 있다. 이로 인해 매 스탭마다 정책을 업데이트할 수 없으며, 특히 continuing 문제에는 적용할 수 없다는 단점이 있다. 한편, temporal difference (TD) 방법론은 biased 하지만 매 스탭마다 업데이트할 수 있다는 장점이 있다. Actor-critic 방법론은 policy gradient 방법론에 TD 방법론을 적용할 수 있게 만들어준다.
+
+<br>
+
+One-step actor-critic은 식 $(13.11)$의 $G_t$ 대신 $r\_{t+1} + \gamma \hat{v}\_{\mathbf{w}}(s\_{t+1})$을 사용한다. 즉,
+
+$$
+\begin{matrix}
+\mathbf{\theta}_{\text{new}} & =& \mathbf{\theta}_{\text{old}} + \alpha \left( r_{t+1} + \gamma \hat{v}_{\mathbf{w}}(s_{t+1}) - \hat{v}_{\mathbf{w}}(s_t)\right) \nabla_{\mathbf{\theta}} \ln \pi_{\mathbf{\theta}_{\text{old}}}(a_t | s_t)  & \quad (13.13) \\ 
+& = & \mathbf{\theta}_{\text{old}} + \alpha \delta_t \nabla_{\mathbf{\theta}} \ln \pi_{\mathbf{\theta}_{\text{old}}}(a_t | s_t) & \quad (13.14)
+\end{matrix}
+$$
+
+<br>
+
+한편, $\mathbf{w}$도 $G_t$를 사용해서 업데이트하는 대신 $\delta_t$를 사용해서 업데이트하게 된다. Actor-critic 알고리즘은 아래와 같다. 교재에서는 one-step actor-critic 뿐만 아니라 보다 일반적인 n-step까지 다루고 있는데, 이 글에서는 생략하는 편이 좋을 것 같다.
+
+![png](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/img/_posts/2022-9-11-policy_gradient_methods/actor-critic.png)
 
 <br>
 
