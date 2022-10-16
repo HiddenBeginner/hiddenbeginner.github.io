@@ -32,6 +32,14 @@ use_math: true
 </summary>
 <div markdown="1">
 
+**2022년 1월 ~** 7차원적 망원경과 AI 기술을 접목한 다중신호 천문학 연구 (과학난제도전융합연구개발사업)
+
+- CNN과 TDA를 이용한 돌발천체 탐지 모형 개선
+
+**2021년 7월 ~ 2022년 2월** 측지 정보의 지구변화 감지 활용 시스템 개념 설계 연구 (국토지리정보원 용역과제)
+
+- Robust Random Cut Forest를 사용한 이상감지 모형 개발
+
 **2020년 2월 ~ 2020년 5월** 위상수학적 데이터 분석을 이용한 이상거래 탐지시스템 고도화 검증 (국민은행 용역과제)
 
 - 보안 이슈로 자세한 내용 생략!
@@ -57,6 +65,15 @@ use_math: true
 </summary>
 <div markdown="1">
 
+**2022년 9월 ~ 2022년 12월** 가짜연구소 5기 `중급 파이썬` 러너
+- 도서: 전문가를 위한 파이썬
+- 정리: [링크](https://github.com/HongB1/Fluent-Python/tree/master/%EC%9D%B4%EB%8F%99%EC%A7%84)
+
+
+**2022년 3월 ~ 2022년 7월** 가짜연구소 4기 `강화학습 첫걸음` 러너
+- 강의: [CS234: Reinforcement Learning, Winter 2019](https://www.youtube.com/playlist?list=PLoROMvodv4rOSOPzutgyCTapiGlY2Nd8u)
+
+
 **2021년 7월 ~ 2021년 12월** 가짜연구소 3기 `Graph + ML = ?` 러너
 
 - 도서: [Graph Representation Learning Book](https://www.cs.mcgill.ca/~wlh/grl_book/)
@@ -74,7 +91,7 @@ use_math: true
 
 - 도서: [Grokking Deep Reinforcement Learning ](https://www.manning.com/books/grokking-deep-reinforcement-learning)
 
-**2021년 2월 ~ 2021년 4월** 
+**2021년 2월 ~ 2021년 4월** 머신러닝 경진대회 스터디
 - 도서: [데이콘 경진대회 1등 솔루션](https://wikibook.co.kr/dacon/)
 
 **2019년 9월 ~ 2020년 9월** [딥러닝 논문 읽기 모임](https://github.com/Lilcob/-DL_PaperReadingMeeting/blob/master/readme.md)
@@ -103,7 +120,7 @@ use_math: true
 </summary>
 <div markdown="1">
 
-**2021년 8월 ~ 2021년 9월** [Samsung AI Challenge for Scientific Discovery](https://dacon.io/competitions/official/235789/overview/description), 삼성전자 종합기술운 & Dacon
+**2021년 8월 ~ 2021년 9월** [Samsung AI Challenge for Scientific Discovery](https://dacon.io/competitions/official/235789/overview/description), 삼성전자 종합기술원 & Dacon
 - 대회 주제: 주어진 분자의 SMILES 구조식을 이용하여 분자의 성질 (`ST1 Gap`) 예측
 - 해결 방법: Relational GCN + Fold Ensemble
 - 결과: 21등 / 220등, [github](https://github.com/HiddenBeginner/samsung-ai-challenge)
