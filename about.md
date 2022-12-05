@@ -120,6 +120,11 @@ use_math: true
 </summary>
 <div markdown="1">
 
+**2021년 11월** [2022 POSTECH OIBC CHALLENGE 태양광 발전량 예측 경진대회](https://o.solarkim.com/cmpt2022), 에이치에너지 & POSTECH OIBC
+- 대회 주제: 신규 설치된 광명시 태양광 발전소의 다음날 매시간에 해당하는 태양광 발전량을 구간 예측
+- 해결 방법: WaveNet 기반 태양광 발전량 확률 모형 (다음날 1시간 단위 기상 예보 -> 다음날 1시간 단위 발전량의 평균 및 표준 편차) 
+- 결과: 1등 (대상), [github](https://github.com/HiddenBeginner/2022_OIBC_Competition)
+
 **2021년 8월 ~ 2021년 9월** [Samsung AI Challenge for Scientific Discovery](https://dacon.io/competitions/official/235789/overview/description), 삼성전자 종합기술원 & Dacon
 - 대회 주제: 주어진 분자의 SMILES 구조식을 이용하여 분자의 성질 (`ST1 Gap`) 예측
 - 해결 방법: Relational GCN + Fold Ensemble
