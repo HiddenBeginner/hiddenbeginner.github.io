@@ -154,21 +154,21 @@ use_math: true
 **2021년 11월** [2022 POSTECH OIBC CHALLENGE 태양광 발전량 예측 경진대회](https://o.solarkim.com/cmpt2022), 에이치에너지 & POSTECH OIBC
 - 대회 주제: 신규 설치된 광명시 태양광 발전소의 다음날 매시간에 해당하는 태양광 발전량을 구간 예측
 - 해결 방법: WaveNet 기반 태양광 발전량 확률 모형 (다음날 1시간 단위 기상 예보 -> 다음날 1시간 단위 발전량의 평균 및 표준 편차) 
-- 결과: 1등 (대상), [github](https://github.com/HiddenBeginner/2022_OIBC_Competition)
+- 결과: 1등 / 64팀, [github](https://github.com/HiddenBeginner/2022_OIBC_Competition)
 
 <br>
 
 **2021년 8월 ~ 2021년 9월** [Samsung AI Challenge for Scientific Discovery](https://dacon.io/competitions/official/235789/overview/description), 삼성전자 종합기술원 & Dacon
 - 대회 주제: 주어진 분자의 SMILES 구조식을 이용하여 분자의 성질 (`ST1 Gap`) 예측
 - 해결 방법: Relational GCN + Fold Ensemble
-- 결과: 21등 / 220등, [github](https://github.com/HiddenBeginner/samsung-ai-challenge)
+- 결과: 21등 / 220팀, [github](https://github.com/HiddenBeginner/samsung-ai-challenge)
 
 <br>
 
 **2020년 11월** [공공데이터 활용 수력 댐 강우예측 AI 경진대회](https://dacon.io/competitions/official/235646/overview/), 한국수력원자력(주) & Dacon
 - 대회 주제: 기상 레이더에서 관측한 구름(반사도) 이미지 데이터를 이용하여, 미래의 구름(반사도) 이미지 예측
 - 해결 방법: UNet with SSIM loss function, Averaging folds ensemble
-- 결과: 29등 / 131등, [github](https://github.com/HiddenBeginner/dacon-precipitation)
+- 결과: 29등 / 131팀, [github](https://github.com/HiddenBeginner/dacon-precipitation)
 
 <br>
 
