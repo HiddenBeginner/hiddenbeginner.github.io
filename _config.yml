@@ -1,8 +1,8 @@
 title: 재야의 숨은 초보
 description: 재야의 숨은 고수가 되고 싶은 초심자
-author: HiddenBeginner (이동진)
+author: HiddenBeginner
 github: https://github.com/HiddenBeginner
-about: 안녕하세요. 데이터사이언스를 전공하고 있는 이동진입니다. 빅 데이터 분석 및 산업수학 문제 해결에 관심을 가지고 공부하고 있습니다.
+about: 안녕하세요. 방문해 주셔서 감사합니다. 아직 실력이 많이 부족하지만 언젠가 고수 반열에 들어서 이 세상에 많은 기여를 하겠습니다.
 avatar_url: /static/img/HDBG.png
 timezone: Asia/Seoul
 
@@ -22,10 +22,6 @@ social:
       link: "https://github.com/HiddenBeginner"
     - icon: fa-linkedin
       link: "https://www.linkedin.com/in/hiddenbeginner"
-    - icon: fa-facebook
-      link: "https://www.facebook.com/hiddenbeginner"
-    - icon: fa-instagram
-      link: "https://www.instagram.com/jin_dong2/"
 
 share:
   twitter_username: github.io
@@ -34,8 +30,6 @@ share:
 urls:
     - text: About Me
       url: /about/
-#    - text: Projects
-#      url: /projects/
     - text: Publications
       url: /publications/
     - text: Donors
