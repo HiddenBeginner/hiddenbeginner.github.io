@@ -34,6 +34,8 @@ urls:
       url: /publications/
     - text: Donors
       url: /donors/
+    - text: 심층강화학습 책
+      url: /Deep-Reinforcement-Learnings/book/intro.html
 
 url: "https://hiddenbeginner.github.io"
 baseurl: ""
