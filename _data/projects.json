@@ -1,18 +1,10 @@
 [
 	{
-		"slug": "cool-project",
-		"name": "Cool project 1",
-		"image": "placeholder.jpg",
+		"slug": "skill_check_env",
+		"name": "Skill Check",
 		"url": "https://www.google.com",
-		"date": "Jan 2014",
-		"tags": ["Angular JS","API"]
-	},
-	{
-		"slug": "cool-project",
-		"name": "Cool project 1",
 		"image": "placeholder.jpg",
-		"url": "https://www.google.com",
-		"date": "Jan 2014",
-		"tags": ["python"]
-	},
+		"date": "2023-06-18",
+		"tags": ["Reinforcement learning", "Environment", "DQN"]
+	}
 ]

@@ -32,6 +32,8 @@ urls:
       url: /about/
     - text: Publications
       url: /publications/
+    - text: Projects
+      url: /projects/
     - text: Donors
       url: /donors/
     - text: 심층강화학습 책

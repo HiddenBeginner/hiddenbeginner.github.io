@@ -76,6 +76,17 @@ use_math: true
 </summary>
 <div markdown="1">
 
+**2023년 3월 ~ 2023년 4월** 강화학습 논문 리뷰 스터디 10기
+- 발표: [SUNRISE: A Simple Unified Framework for Ensemble Learning in Deep Reinforcement Learning](https://github.com/utilForever/rl-paper-study/blob/main/10th/230306%20-%20SUNRISE%2C%20A%20Simple%20Unified%20Framework%20for%20Ensemble%20Learning%20in%20Deep%20Reinforcement%20Learning%2C%20K.%20Lee%20et%20al%2C%202020.pdf)
+
+<br>
+
+**2023년 2월 ~ 2023년 4월** 가짜연구소 6기 `나만의 딥러닝 프레임워크 만들기` 공동 빌더
+- 도서: 밑바닥부터 시작하는 딥러닝3
+- 정리: [링크](https://github.com/HiddenBeginner/dezero)
+
+<br>
+
 **2022년 9월 ~ 2022년 12월** 강화학습 논문 리뷰 스터디 9기
 - 발표: [Hindsight Credit Assignment](https://github.com/utilForever/rl-paper-study/blob/main/9th/221121%20-%20Hindsight%20Credit%20Assignment%2C%20A.%20Harutyunyan%20et%20al%2C%202019.pdf)
   
