@@ -88,14 +88,31 @@ $\epsilon=0.1$이라고 할 때 1의 행동을 취할 확률은 $0.05$가 된다
 
 문제 분석을 바탕으로, 초기 $\epsilon=0.1$로 설정하고 이후 1백만 steps 동안 $\epsilon=0.005$로 선형적으로 감소시키게 수정했더니 에이전트가 성공적으로 환경을 해결하는 것을 확인할 수 있었다. 환경과 상호작용 횟수에 따른 에이전트의 Return 곡선은 다음과 같다.
 
-![learning_curve](https://raw.githubusercontent.com/HiddenBeginner/skill_check_env/master/results/learning_curve.png)
+![learning_curve](https://raw.githubusercontent.com/HiddenBeginner/skill_check_env/master/results/learning_curve.png){: .center}
 
 <br>
 
 학습이 종료된 후 10번의 에피소드에 대해서 테스트했을 때, 1번만 일반 성공을 한 것을 제외하고 9번은 대성공을 하였다. 
 애니메이션은 아래와 같다. 회전 속도가 많이 느려보이는데, 환경을 120 FPS로 만들다보니 프레임 수가 많아져서 그렇다.
 
-![animation](https://raw.githubusercontent.com/HiddenBeginner/skill_check_env/master/results/animation.gif)
+![animation](https://raw.githubusercontent.com/HiddenBeginner/skill_check_env/master/results/animation.gif){: .center}
+
+<br>
+
+이 외에도 스킬 체크 실패한 케이스를 찾기 위해서 역체리피킹을 하였다. 
+아래 애니메이션는 5번의 에피소드에 대해서 테스트하였고, 두 번째 에피소드에서 스킬체크 실패를 했다.
+스킬 체크 실패의 원인을 찾기 위하여 각 상태에서의 Q-network의 출력값도 시각화해서 살펴보았다.
+0의 행동과 1의 행동 중 Q값이 더 큰 쪽을 파란색으로 나타냈다.
+
+![animation2](https://raw.githubusercontent.com/HiddenBeginner/hiddenbeginner.github.io/master/static/projects/skill_check_env.gif){: .center}
+
+<br>
+
+일반적으로 바늘이 스킬 체크 성공 구간에 가까워질수록 0의 행동에 대한 Q값이 증가한다. 그 동안 1의 행동에 대한 Q값은 -5이다.
+그리고, 성공 구간 바로 직전부터 1의 행동에 대한 Q값이 크게 증가하여 0의 행동에 대한 Q값을 역전하면서 1의 행동을 취하게 된다.
+하지만, 두 번째 에피소드에서는 대성공 구간 동안 0과 1의 행동에 대한 Q값이 모두 10에 가까운 값이며, 1의 Q값이 0의 Q값을 근소한 차이로 역전하지 못하여 0의 행동을 취한다.
+대성공 구간을 지나면 일반 성공 구간인데, 여기서 스킬 체크를 성공하면 +1을 보상을 받는다. 하지만 Q network가 이를 학습하지 못했는지 행동 가치를 0으로 예측하고 있다.
+이 때문에 성공 구간에서도 1의 행동을 취하지 못하고 결국 스킬 체크에 실패하게 된 것으로 보인다.
 
 <br>
 

@@ -3,7 +3,7 @@
 		"slug": "skill_check_env",
 		"name": "Skill Check",
 		"url": "https://www.google.com",
-		"image": "placeholder.jpg",
+		"image": "skill_check_env.gif",
 		"date": "2023-06-18",
 		"tags": ["Reinforcement learning", "Environment", "DQN"]
 	}

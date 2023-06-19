@@ -18,7 +18,7 @@ layout: default
     {% for project in site.data.projects %}
       {% if project.slug == page.slug %}
         <a href="/static/projects/{{ project.image }}" class="thickbox">
-          <img src="/static/projects/{{ project.image }}" alt="{{ page.title }}" title="{{ page.title }}">
+          <img src="/static/projects/{{ project.image }}" alt="{{ page.title }}" title="{{ page.title }}" style="margin-left: auto; margin-right: auto; display: block">
         </a>
       {% endif %}
     {% endfor %}
