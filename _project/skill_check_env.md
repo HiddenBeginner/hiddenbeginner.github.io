@@ -31,6 +31,10 @@ Dead by Daylight에서 생존자가 발전기 수리나 회복 등을 수행할 
 
 <br>
 
+![animation3](https://raw.githubusercontent.com/HiddenBeginner/skill_check_env/master/results/human_mode.gif){: width="150" height="150"}{: .center}
+
+<br>
+
 이에 영감을 받아 Skill Check 환경을 만들게 되었다. 한 에피소드를 한 번의 스킬 체크 상황으로 간주했다. 매 에피소드마다 길이 55도의 성공 구간이 90도 ~ 360도 사이에서 임의로 생성되며, 성공 구간의 첫 10도를 대성공 구간, 나머지 45도를 일반 성공 구간으로 구분하였다. 에피소드 시작시 빨간 바늘이 12시 방향을 가리키고 있으며, 120 FPS을 가정하여 360도 회전을 120 프레임으로 나누었으며 따라서 1 프레임이 지날 때마다 빨간 바늘이 3도씩 움직이게 된다. 
 
 <br>
