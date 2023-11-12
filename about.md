@@ -162,10 +162,17 @@ use_math: true
 </summary>
 <div markdown="1">
 
+**2023년 10월** [2023 Samsung AI Challenge : Camera-Invariant Domain Adaptation](https://dacon.io/competitions/official/236132/overview/description), Samsung SAIT 주최 & Dacon 운영
+- 대회 주제: 카메라 특성 변화에 강인한 Domain Adaptive Semantic Segmentation 알고리즘 개발
+- 해결 방법: SegFormer + Psuedo labeling, SegFormer + DANN, Mask2Former, OneFormer 앙상블 
+- 결과: 4등 / 212팀, 상금 수상, [github](https://github.com/HiddenBeginner/2023_Samsung_AI_Challenge_DA)
+
+<br>
+
 **2021년 11월** [2022 POSTECH OIBC CHALLENGE 태양광 발전량 예측 경진대회](https://o.solarkim.com/cmpt2022), 에이치에너지 & POSTECH OIBC
 - 대회 주제: 신규 설치된 광명시 태양광 발전소의 다음날 매시간에 해당하는 태양광 발전량을 구간 예측
 - 해결 방법: WaveNet 기반 태양광 발전량 확률 모형 (다음날 1시간 단위 기상 예보 -> 다음날 1시간 단위 발전량의 평균 및 표준 편차) 
-- 결과: 1등 / 64팀, [github](https://github.com/HiddenBeginner/2022_OIBC_Competition)
+- 결과: 1등 / 64팀, 상금 수상, [github](https://github.com/HiddenBeginner/2022_OIBC_Competition)
 
 <br>
 
