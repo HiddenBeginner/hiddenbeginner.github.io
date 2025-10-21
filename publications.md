@@ -5,6 +5,10 @@ permalink: /publications/
 use_math: true
 ---
 
+- Dongjin Lee, Gregory S.H. Paek, Seo-Won Chang, Changwan Kim, Mankeun Jeong, Hongjae Moon, Seong-Heon Lee, Jae-Hun Jung, Myungshin Im. Investigating the Effects of Point Source Injection Strategies on KMTNet Real/Bogus Classification. *The Astronomical Journal (AJ)*, accepted. Preprint: [https://arxiv.org/abs/2510.17053](https://arxiv.org/abs/2510.17053)
+
+<br>
+
 - Jungeun Kim$^{\*}$, Junwon You$^{\*}$, Dongjin Lee$^{\*}$, Ha Young Kim, Jae-Hun Jung. Do Topological Characteristics Help in Knowledge Distillation? *Forty-first International Conference on Machine Learning*, 2024. [https://openreview.net/forum?id=2dEH0u8w0b](https://openreview.net/forum?id=2dEH0u8w0b)
 
 <br>
